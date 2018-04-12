@@ -122,9 +122,8 @@ class linkedList[T] extends traitList[T] {
   override def find(value: T): Option[Int] = {
     var currentNode: nodeList[T] = head
     for (i <- 0 until _size){
-      println(currentNode.value)
       if (currentNode.value == value){
-        Some(i)
+        return Some(i)
       }
       else {
         currentNode = currentNode.nextNode
