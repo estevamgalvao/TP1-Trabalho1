@@ -43,10 +43,15 @@ class linkedList[T] extends traitList[T] {
   }
 
   override def show: Unit = {
-    var currentNode: nodeList[T] = head
-    for (i <- 0 until _size){
-      println(currentNode.value)
-      currentNode = currentNode.nextNode
+    if (isEmpty == false) {
+      var currentNode: nodeList[T] = head
+      for (i <- 0 until _size) {
+        println(currentNode.value)
+        currentNode = currentNode.nextNode
+      }
+    }
+    else {
+      println("List is empty.")
     }
   }
 
@@ -132,6 +137,11 @@ class linkedList[T] extends traitList[T] {
     None
   }
 
+  override def clear: Unit = {
+    for (i <- 0 until _size){
+      removeAt(0)
+    }
+  }
 
 
 
@@ -154,7 +164,6 @@ class linkedList[T] extends traitList[T] {
 
 
 
-  override def clear: Unit = ???
 
 
 
@@ -162,8 +171,6 @@ class linkedList[T] extends traitList[T] {
   override def removeIf(func: T => Boolean): Int = ???
 
   override def reverse: Unit = ???
-
-
 
   override def sort: Unit = ???
 }

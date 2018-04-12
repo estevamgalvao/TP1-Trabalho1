@@ -16,6 +16,9 @@ object Main {
     println(list1.elementAt(2))
     println(list1.find(11))
 
+    list1.clear
+    println()
+    list1.show
   }
 
 }
