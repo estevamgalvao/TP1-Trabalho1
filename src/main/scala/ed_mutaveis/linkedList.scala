@@ -33,10 +33,14 @@ class linkedList[T] extends traitList[T] {
         currentNode.nextNode = nodeList(value, currentNode.nextNode)
       }
       _size += 1
-      true
+      return true
     }
-    println("Invalid position.")
+    println("invalid position")
     false
+  }
+
+  override def insert(value: T): Unit = {
+    insertAt(_size, value)
   }
 
   override def show: Unit = {
@@ -48,12 +52,12 @@ class linkedList[T] extends traitList[T] {
       }
     }
     else {
-      println("List is empty.")
+      println("empty list")
     }
   }
 
   override def removeAt(pos: Int): Boolean = {
-    if (pos >= 0 && pos <= _size) {
+    if (pos >= 0 && pos <= _size-1) {
       if (pos == 0) {
         head = head.nextNode
       }
@@ -62,9 +66,9 @@ class linkedList[T] extends traitList[T] {
         currentNode.nextNode = currentNode.nextNode.nextNode
       }
       _size -= 1
-      true
+      return true
     }
-    println("Invalid position.")
+    println("invalid position")
     false
   }
 
@@ -77,7 +81,6 @@ class linkedList[T] extends traitList[T] {
     else {
       var currentNode: nodeList[T] = head
       for (i <- 1 until _size) {
-        //println(i)
         if (currentNode.nextNode.value == value) {
           currentNode.nextNode = currentNode.nextNode.nextNode
           _size -= 1
@@ -108,7 +111,7 @@ class linkedList[T] extends traitList[T] {
   }
 
   override def elementAt(pos: Int): Option[T] = {
-    if (pos >= 0 && pos <= _size){
+    if (pos >= 0 && pos <= _size-1){
       if(pos == 0){
         Some(head.value)
       }
@@ -121,7 +124,7 @@ class linkedList[T] extends traitList[T] {
       }
     }
     else{
-      println("Invalid position.")
+      println("invalid position")
       None
     }
   }
@@ -145,6 +148,7 @@ class linkedList[T] extends traitList[T] {
     }
   }
 
+//não sei como passar o valor de node.value para a função na main
   override def removeIf(func: T => Boolean): Boolean = {
     var verifier: Boolean = false
     if (func(head.value) == true){

@@ -4,6 +4,7 @@ trait traitList[T] {
   def isEmpty: Boolean
   def size: Int
   def insertAt(pos: Int, value: T): Boolean
+  def insert(value: T): Unit
   def removeAt(pos: Int): Boolean
   def remove(value: T): Boolean
   def elementAt(pos: Int): Option[T]

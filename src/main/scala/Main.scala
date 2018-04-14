@@ -1,4 +1,5 @@
 import ed_mutaveis.linkedList
+import ed_mutaveis.Stack
 
 
 object Main {
@@ -8,21 +9,24 @@ object Main {
   def main(args: Array[String]): Unit = {
 
     var list1 = new linkedList[Int]
-    list1.insertAt(0, 10)
-    list1.insertAt(1, 9)
-    list1.insertAt(2, 11)
-    list1.insertAt(3, 16)
-    list1.insertAt(4, 11)
+    var stack1 = new Stack[Int]
 
-    list1.show
-    println(list1.elementAt(2))
-    println(list1.find(11))
-
-    list1.removeIf
-    println()
-    list1.show
+    stack1.insert(9)
+    stack1.insert(10)
+    stack1.insert(18)
+    println(stack1.top)
+    stack1.pop
+    println(stack1.top)
 
 
+//    list1.insertAt(0, 10)
+//    list1.insert(14)
+//    list1.insertAt(2, 9)
+//    list1.insertAt(3, 11)
+//
+//    println(list1.size)
+//    list1.removeAt(4)
+//    list1.show
   }
 
 }
