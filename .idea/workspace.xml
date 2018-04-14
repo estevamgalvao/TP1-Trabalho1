@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="360">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -48,26 +48,27 @@
       <file leaf-file-name="traitList.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="252">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+            <state relative-caret-position="198">
+              <caret line="147" column="31" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
               <folding>
                 <element signature="e#21#74#0" expanded="true" />
                 <element signature="e#364#545#0" />
                 <element signature="e#589#927#0" />
-                <element signature="e#989#1026#0" />
-                <element signature="e#1405#1741#0" />
+                <element signature="e#975#1203#0" />
+                <element signature="e#1085#1381#0" />
                 <element signature="e#1857#2165#0" />
                 <element signature="e#2292#2515#0" />
                 <element signature="e#2784#2835#0" />
+                <element signature="e#3102#3188#0" />
               </folding>
             </state>
           </provider>
@@ -314,12 +315,12 @@
       <workItem from="1523416261433" duration="1819000" />
       <workItem from="1523545703238" duration="5243000" />
       <workItem from="1523504051716" duration="7203000" />
-      <workItem from="1523516514756" duration="15349000" />
+      <workItem from="1523516514756" duration="21409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30752000" />
+    <option name="totallyTimeSpent" value="36812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="993" y="25" width="927" height="1055" extended-state="4" />
@@ -366,7 +367,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -399,11 +400,12 @@
             <element signature="e#21#74#0" expanded="true" />
             <element signature="e#364#545#0" />
             <element signature="e#589#927#0" />
-            <element signature="e#989#1026#0" />
-            <element signature="e#1405#1741#0" />
+            <element signature="e#975#1203#0" />
+            <element signature="e#1085#1381#0" />
             <element signature="e#1857#2165#0" />
             <element signature="e#2292#2515#0" />
             <element signature="e#2784#2835#0" />
+            <element signature="e#3102#3188#0" />
           </folding>
         </state>
       </provider>
@@ -423,11 +425,12 @@
             <element signature="e#21#74#0" expanded="true" />
             <element signature="e#364#545#0" />
             <element signature="e#589#927#0" />
-            <element signature="e#989#1026#0" />
-            <element signature="e#1405#1741#0" />
+            <element signature="e#975#1203#0" />
+            <element signature="e#1085#1381#0" />
             <element signature="e#1857#2165#0" />
             <element signature="e#2292#2515#0" />
             <element signature="e#2784#2835#0" />
+            <element signature="e#3102#3188#0" />
           </folding>
         </state>
       </provider>
@@ -460,34 +463,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
-          <folding>
-            <element signature="e#21#74#0" expanded="true" />
-            <element signature="e#364#545#0" />
-            <element signature="e#589#927#0" />
-            <element signature="e#989#1026#0" />
-            <element signature="e#1405#1741#0" />
-            <element signature="e#1857#2165#0" />
-            <element signature="e#2292#2515#0" />
-            <element signature="e#2784#2835#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="252">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="360">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="147" column="31" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
+          <folding>
+            <element signature="e#21#74#0" expanded="true" />
+            <element signature="e#364#545#0" />
+            <element signature="e#589#927#0" />
+            <element signature="e#975#1203#0" />
+            <element signature="e#1085#1381#0" />
+            <element signature="e#1857#2165#0" />
+            <element signature="e#2292#2515#0" />
+            <element signature="e#2784#2835#0" />
+            <element signature="e#3102#3188#0" />
+          </folding>
         </state>
       </provider>
     </entry>

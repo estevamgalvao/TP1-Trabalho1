@@ -25,20 +25,17 @@ class linkedList[T] extends traitList[T] {
 
   override def insertAt(pos: Int, value: T): Boolean = {
     if(pos >= 0 && pos <= _size) {
-
       if(pos == 0) {
         head = nodeList(value, head)
       }
-
       else {
         val currentNode: nodeList[T] = nodePointer(pos - 1)
         currentNode.nextNode = nodeList(value, currentNode.nextNode)
       }
-
       _size += 1
       true
     }
-
+    println("Invalid position.")
     false
   }
 
@@ -67,27 +64,31 @@ class linkedList[T] extends traitList[T] {
       _size -= 1
       true
     }
+    println("Invalid position.")
     false
   }
 
-  override def remove(value: T): Unit = {
+  override def remove(value: T): Boolean = {
     if (head.value == value){
       head = head.nextNode
       _size -= 1
+      return true
     }
     else {
       var currentNode: nodeList[T] = head
-      for (i <- 0 until _size-1) {
+      for (i <- 1 until _size) {
         //println(i)
         if (currentNode.nextNode.value == value) {
           currentNode.nextNode = currentNode.nextNode.nextNode
           _size -= 1
+          return true
         }
         else {
           currentNode = currentNode.nextNode
         }
       }
     }
+    return false
   }
 
   override def count(value: T): Int = {
@@ -120,6 +121,7 @@ class linkedList[T] extends traitList[T] {
       }
     }
     else{
+      println("Invalid position.")
       None
     }
   }
@@ -143,32 +145,28 @@ class linkedList[T] extends traitList[T] {
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  override def removeIf(func: T => Boolean): Int = ???
+  override def removeIf(func: T => Boolean): Boolean = {
+    var verifier: Boolean = false
+    if (func(head.value) == true){
+      head = head.nextNode
+      _size -= 1
+      verifier = true
+    }
+    else {
+      var currentNode: nodeList[T] = head
+      for (i <- 1 until _size) {
+        if (func(currentNode.nextNode.value) == true){
+          currentNode.nextNode = currentNode.nextNode.nextNode
+          _size -= 1
+          verifier = true
+        }
+        else {
+          currentNode = currentNode.nextNode
+        }
+      }
+    }
+    return verifier
+  }
 
   override def reverse: Unit = ???
 
