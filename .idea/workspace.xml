@@ -58,11 +58,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="traitList.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="traitList.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testLinkedList.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/testLinkedList.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="738">
+              <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="52" />
               <folding>
                 <element signature="e#364#545#0" />
                 <element signature="e#589#927#0" />
@@ -118,9 +130,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/List.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Stack.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitStack.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/testLinkedList.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala" />
       </list>
     </option>
   </component>
@@ -184,6 +197,13 @@
               <item name="TP1 - Trabalho1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercícios-TP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP1 - Trabalho1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Exercícios-TP1" type="b2602c69:ProjectViewProjectNode" />
@@ -341,12 +361,12 @@
       <workItem from="1523416261433" duration="1819000" />
       <workItem from="1523545703238" duration="5243000" />
       <workItem from="1523504051716" duration="7203000" />
-      <workItem from="1523516514756" duration="31140000" />
+      <workItem from="1523516514756" duration="31438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46543000" />
+    <option name="totallyTimeSpent" value="46841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="993" y="25" width="927" height="1055" extended-state="4" />
@@ -539,6 +559,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/Stack.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/testLinkedList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitStack.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -546,10 +583,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="738">
+          <caret line="178" column="49" selection-start-line="178" selection-start-column="49" selection-end-line="178" selection-end-column="52" />
           <folding>
             <element signature="e#364#545#0" />
             <element signature="e#589#927#0" />
@@ -563,20 +607,6 @@
             <element signature="e#3102#3188#0" />
             <element signature="e#3401#3967#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/Stack.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
