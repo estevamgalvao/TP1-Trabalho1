@@ -9,6 +9,4 @@ trait traitStack[T] {
   def clear: Unit
   def isEmpty: Boolean
   def count(value: T): Int
-
-
 }

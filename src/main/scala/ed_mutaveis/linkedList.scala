@@ -175,4 +175,6 @@ class linkedList[T] extends traitList[T] {
   override def reverse: Unit = ???
 
   override def sort: Unit = ???
+
+  override def applyAll(func: T => Unit): Unit = ???
 }
