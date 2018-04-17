@@ -1,7 +1,6 @@
 package ed_mutaveis
 
 import java.security.KeyStore.TrustedCertificateEntry
-
 import scala.io
 import scala.io.StdIn
 
@@ -151,25 +150,24 @@ class linkedList[T] extends traitList[T] {
 //não sei como passar o valor de node.value para a função na main
   override def removeIf(func: T => Boolean): Boolean = {
     var verifier: Boolean = false
-    if (func(head.value) == true){
-      head = head.nextNode
-      _size -= 1
-      verifier = true
-    }
-    else {
+//    if (func(head.value) == true){
+//      head = head.nextNode
+//      _size -= 1
+//      verifier = true
+//    }
+//    if {
       var currentNode: nodeList[T] = head
-      for (i <- 1 until _size) {
-        if (func(currentNode.nextNode.value) == true){
-          currentNode.nextNode = currentNode.nextNode.nextNode
-          _size -= 1
-          verifier = true
+      for (i <- 0 until _size) {
+        if (func(currentNode.value) == true){
+          verifier = removeAt(i)
+//          currentNode.nextNode = currentNode.nextNode.nextNode
+//          _size -= 1
         }
         else {
           currentNode = currentNode.nextNode
         }
       }
-    }
-    return verifier
+    verifier
   }
 
   override def reverse: Unit = ???
