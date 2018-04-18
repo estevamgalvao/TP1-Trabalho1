@@ -30,7 +30,7 @@ object Main {
     //println(doublelist1.size)
 
     //doublelist1.show
-    list1.removeIf(par)
+    list1.filter(par)
 
     list1.show
 

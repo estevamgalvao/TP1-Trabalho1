@@ -13,7 +13,7 @@ trait traitList[T] {
   def reverse: Unit
   def count(value: T): Int
   def clear: Unit
-  def removeIf(func: (T) => Boolean): Boolean
+  def filter(func: (T) => Boolean): Boolean
   def show: Unit
   def applyAll(func: (T) => Unit): Unit
 }
