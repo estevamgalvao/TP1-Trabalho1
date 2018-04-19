@@ -1,7 +1,7 @@
 import ed_mutaveis.linkedList
 import ed_mutaveis.Stack
 import ed_mutaveis.Queue
-import ed_mutaveis.doubleLinkedList
+import ed_mutaveis.doublyLinkedList
 
 
 object Main {
@@ -13,7 +13,7 @@ object Main {
     var list1 = new linkedList[Int]
     var stack1 = new Stack[Int]
     var queue1 = new Queue[Int]
-    //var doublelist1 = new doubleLinkedList[Int]
+    var doublylist1 = new doublyLinkedList[Int]
 
 
     list1.insertAt(0,10)
@@ -22,17 +22,20 @@ object Main {
     list1.insertAt(3, 30)
     stack1.insert(10)
     queue1.insert(8)
-    //doublelist1.insertAt(0, 10)
-    //doublelist1.insertAt(1, 11)
-    //doublelist1.insertAt(2, 12)
-    //doublelist1.insertAt(2, 12)
+    doublylist1.insertAt(0, 10)
+    doublylist1.insertAt(1, 11)
+    doublylist1.insertAt(2, 12)
+    doublylist1.insertAt(0, 9)
+    doublylist1.insertAt(1, 14)
+    doublylist1.insertAt(5, 22)
+    val boolean = doublylist1.insertAt(7, 30)
+    println(boolean)
 
-    //println(doublelist1.size)
-
+    println(doublylist1.size)
+    doublylist1.show
     //doublelist1.show
-    list1.filter(par)
-
-    list1.show
+//    list1.filter(par)
+//    list1.show
 
   }
 

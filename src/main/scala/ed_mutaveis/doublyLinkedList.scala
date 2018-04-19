@@ -9,7 +9,7 @@ class doublyLinkedList[T] extends traitList[T] {
   private var end: doublyNodeList[T] = _
 
   private def nodePointer(pos: Int): doublyNodeList[T] = {
-    if ((_size - pos) > pos) {
+    if ((_size - pos) >= pos) {
       var currentNode: doublyNodeList[T] = head
       for (i <- 0 until pos) {
         currentNode = currentNode.nextNode
@@ -21,6 +21,7 @@ class doublyLinkedList[T] extends traitList[T] {
       for (i <- pos until _size) {
         currentNode = currentNode.prevNode
       }
+      println("Value nodePointer: " + currentNode.value)
       return currentNode
     }
   }
@@ -28,23 +29,33 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def insertAt(pos: Int, value: T): Boolean = {
     if (pos >= 0 && pos <= _size) {
-      if (pos == 0) {
-        head = doublyNodeList(value, head, null)
+      if (head == null) {
+        head = doublyNodeList(value, null, null )
+
+      }
+      else if (head.nextNode == null) {
+        end = doublyNodeList(value, head, null)
+        head.nextNode = end
+      }
+      else if (pos == 0) {
+        head = doublyNodeList(value, null, head)
         head.nextNode.prevNode = head
       }
       else if (pos == _size) {
-        end = doublyNodeList(value, null, end)
+        end = doublyNodeList(value, end, null)
         end.prevNode.nextNode = end
       }
       else {
         val currentNode = nodePointer(pos - 1)
         //Faço o novo elemento -cN.next pois será adicionado na frente- apontar para o .next do antigo "currentNode"
         // antigo -> current -> antigo.next
-        currentNode.nextNode = doublyNodeList[T](value, currentNode.nextNode, currentNode)
+        currentNode.nextNode = doublyNodeList[T](value, currentNode, currentNode.nextNode)
+        currentNode.nextNode.prevNode = currentNode
       }
+      _size += 1
       return true
     }
-    else return false
+    else println("invalid position"); return false
   }
 
   override def applyAll(func: T => Unit): Unit = ???
@@ -67,15 +78,15 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def removeAt(pos: Int): Boolean = ???
 
-  override def removeIf(func: T => Boolean): Boolean = ???
+  override def filter(func: T => Boolean): Boolean = ???
 
   override def reverse: Unit = ???
 
   override def show: Unit = {
     if (isEmpty == false) {
       var currentNode: doublyNodeList[T] = head
-      println("\nlooool")
-      println(currentNode.value)
+//      println("\nlooool")
+//      println(currentNode.value)
       for (i <- 0 until _size) {
         println(currentNode.value)
         currentNode = currentNode.nextNode
