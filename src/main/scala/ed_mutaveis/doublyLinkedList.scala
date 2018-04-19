@@ -1,15 +1,50 @@
 package ed_mutaveis
 
 
-case class doublyNodeList[T](value: T, var nextNode: doublyNodeList[T], var prevNode: doublyNodeList[T])
+case class doublyNodeList[T](value: T, var prevNode: doublyNodeList[T], var nextNode: doublyNodeList[T])
 
-class doubleLinkedList[T] extends traitList[T] {
+class doublyLinkedList[T] extends traitList[T] {
   private var _size: Int = 0
   private var head: doublyNodeList[T] = _
+  private var end: doublyNodeList[T] = _
+
+  private def nodePointer(pos: Int): doublyNodeList[T] = {
+    if ((_size - pos) > pos) {
+      var currentNode: doublyNodeList[T] = head
+      for (i <- 0 until pos) {
+        currentNode = currentNode.nextNode
+      }
+      return currentNode
+    }
+    else {
+      var currentNode: doublyNodeList[T] = end
+      for (i <- pos until _size) {
+        currentNode = currentNode.prevNode
+      }
+      return currentNode
+    }
+  }
+
 
   override def insertAt(pos: Int, value: T): Boolean = {
-
-
+    if (pos >= 0 && pos <= _size) {
+      if (pos == 0) {
+        head = doublyNodeList(value, head, null)
+        head.nextNode.prevNode = head
+      }
+      else if (pos == _size) {
+        end = doublyNodeList(value, null, end)
+        end.prevNode.nextNode = end
+      }
+      else {
+        val currentNode = nodePointer(pos - 1)
+        //Faço o novo elemento -cN.next pois será adicionado na frente- apontar para o .next do antigo "currentNode"
+        // antigo -> current -> antigo.next
+        currentNode.nextNode = doublyNodeList[T](value, currentNode.nextNode, currentNode)
+      }
+      return true
+    }
+    else return false
   }
 
   override def applyAll(func: T => Unit): Unit = ???
