@@ -21,11 +21,10 @@ class doublyLinkedList[T] extends traitList[T] {
       for (i <- pos until _size) {
         currentNode = currentNode.prevNode
       }
-      println("Value nodePointer: " + currentNode.value)
+      //println("Value nodePointer: " + currentNode.value)
       return currentNode
     }
   }
-
 
   override def insertAt(pos: Int, value: T): Boolean = {
     if (pos >= 0 && pos <= _size) {
@@ -58,6 +57,10 @@ class doublyLinkedList[T] extends traitList[T] {
     else println("invalid position"); return false
   }
 
+  override def insert(value: T): Unit = {
+    insertAt(_size, value)
+  }
+
   override def applyAll(func: T => Unit): Unit = ???
 
   override def clear: Unit = {
@@ -70,11 +73,37 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def find(value: T): Option[Int] = ???
 
-  override def insert(value: T): Unit = ???
 
   override def isEmpty: Boolean = head == null
 
-  override def remove(value: T): Boolean = ???
+  override def remove(value: T): Boolean = {
+    if (head.value == value) {
+      head = head.nextNode
+      _size -= 1
+      return true
+    }
+    else if (end.value == value) {
+      end = end.prevNode
+      _size -= 1
+    }
+    else {
+      var currentNode = head.nextNode
+      for (i <- 1 until _size-1) {
+        //println("Current Node -> Valor: " + currentNode.value)
+        //println("Current Node -> NextNode: " + currentNode.nextNode.value)
+        if (currentNode.value == value) {
+          currentNode.prevNode.nextNode = currentNode.nextNode
+          currentNode.nextNode.prevNode = currentNode.prevNode
+          _size -= 1
+          return true
+        }
+        else {
+          currentNode = currentNode.nextNode
+        }
+      }
+    }
+    return false
+  }
 
   override def removeAt(pos: Int): Boolean = ???
 

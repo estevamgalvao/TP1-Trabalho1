@@ -25,18 +25,45 @@ object Main {
     doublylist1.insertAt(0, 10)
     doublylist1.insertAt(1, 11)
     doublylist1.insertAt(2, 12)
-    doublylist1.insertAt(0, 9)
-    doublylist1.insertAt(1, 14)
+    doublylist1.insertAt(3, 13)
+    doublylist1.insertAt(4, 14)
     doublylist1.insertAt(5, 22)
-    val boolean = doublylist1.insertAt(7, 30)
+    doublylist1.insertAt(6, 29)
+    val boolean = doublylist1.insertAt(80, 30)
     println(boolean)
 
-    println(doublylist1.size)
+    println("Size: " + doublylist1.size + "\n")
     doublylist1.show
-    //doublelist1.show
-//    list1.filter(par)
-//    list1.show
+    println()
 
+    val boolean2 = doublylist1.remove(12)
+    println("APAGUEI O 12")
+    doublylist1.show
+    println()
+    doublylist1.remove(13)
+    println("APAGUEI O 13")
+    doublylist1.show
+    println()
+    doublylist1.remove(14)
+    println("APAGUEI O 14")
+    doublylist1.show
+    println()
+    doublylist1.remove(22)
+    println("APAGUEI O 22")
+    doublylist1.show
+    println()
+    doublylist1.remove(29)
+    println("APAGUEI O 29")
+    doublylist1.show
+    println()
+    doublylist1.remove(11)
+    println("APAGUEI O 11")
+    doublylist1.show
+    println()
+    doublylist1.remove(10)
+    println("APAGUEI O 10")
+    doublylist1.show
+    doublylist1.show
   }
 
 }
