@@ -5,8 +5,6 @@ import java.security.KeyStore.TrustedCertificateEntry
 import scala.io
 import scala.io.StdIn
 
-case class nodeList[T](value: T, var nextNode: nodeList[T]) //val serve para a lista imutável e var seria mutável
-
 class linkedList[T] extends traitList[T] {
   private var _size: Int = 0
   private var head: nodeList[T] = _
