@@ -32,6 +32,11 @@ class doublyLinkedList[T] extends traitList[T] {
         head = doublyNodeList(value, null, null )
 
       }
+//      else if (head.nextNode == null && pos == 0) {
+//       head = doublyNodeList(value, null, head)
+//        head.nextNode.prevNode = head
+//        preciso corrigir esse erro em que o outro elemento vai ser end n importa se coloca 0 no insert como pos
+//      }
       else if (head.nextNode == null) {
         end = doublyNodeList(value, head, null)
         head.nextNode = end
@@ -74,11 +79,12 @@ class doublyLinkedList[T] extends traitList[T] {
   override def find(value: T): Option[Int] = ???
 
 
-  override def isEmpty: Boolean = head == null
+  override def isEmpty: Boolean = _size == 0
 
   override def remove(value: T): Boolean = {
     if (head.value == value) {
       head = head.nextNode
+//      println("Head. -> NextNode -> Value: " + head.nextNode.value)
       _size -= 1
       return true
     }
@@ -114,8 +120,6 @@ class doublyLinkedList[T] extends traitList[T] {
   override def show: Unit = {
     if (isEmpty == false) {
       var currentNode: doublyNodeList[T] = head
-//      println("\nlooool")
-//      println(currentNode.value)
       for (i <- 0 until _size) {
         println(currentNode.value)
         currentNode = currentNode.nextNode
