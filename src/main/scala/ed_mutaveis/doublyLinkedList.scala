@@ -30,15 +30,15 @@ class doublyLinkedList[T] extends traitList[T] {
     if (pos >= 0 && pos <= _size) {
       if (head == null) {
         head = doublyNodeList(value, null, null )
-
       }
-//      else if (head.nextNode == null && pos == 0) {
-//       head = doublyNodeList(value, null, head)
-//        head.nextNode.prevNode = head
-//        preciso corrigir esse erro em que o outro elemento vai ser end n importa se coloca 0 no insert como pos
-//      }
-      else if (head.nextNode == null) {
+      else if (head.nextNode == null && pos != 0) {
         end = doublyNodeList(value, head, null)
+        head.nextNode = end
+      }
+      else if (head.nextNode == null && pos == 0){
+        val valueAux = head.value
+        head = doublyNodeList(value, null, null)
+        end = doublyNodeList(valueAux, head, null)
         head.nextNode = end
       }
       else if (pos == 0) {
