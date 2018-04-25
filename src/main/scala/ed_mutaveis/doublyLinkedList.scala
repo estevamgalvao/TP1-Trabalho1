@@ -73,11 +73,42 @@ class doublyLinkedList[T] extends traitList[T] {
 
   }
 
-  override def count(value: T): Int = ???
+  override def count(value: T): Int = {
+    var counter: Int = 0
+    if (isEmpty == false) {
+      var currentNode: doublyNodeList[T] = head
+      for (i <- 0 until _size) {
+        if (currentNode.value == value) {
+          counter += 1
+          currentNode = currentNode.nextNode
+        }
+        else {
+          currentNode = currentNode.nextNode
+        }
+      }
+      return counter
+    }
+    else
+      return 0
+  }
 
   override def elementAt(pos: Int): Option[T] = ???
 
-  override def find(value: T): Option[Int] = ???
+  override def find(value: T): Option[Int] = {
+    if (isEmpty == false) {
+      var currentNode = head
+      for (i <-0 until _size) {
+        if (currentNode.value == value) {
+          return Some(i)
+        }
+        else {
+          currentNode = currentNode.nextNode
+        }
+      }
+      return None
+    }
+    else None
+  }
 
   override def isEmpty: Boolean = _size == 0
 
@@ -133,7 +164,6 @@ class doublyLinkedList[T] extends traitList[T] {
       println("invalid position")
       return false
     }
-
   }
 
   override def filter(func: T => Boolean): Boolean = ???

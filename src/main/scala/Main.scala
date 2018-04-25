@@ -16,7 +16,7 @@ object Main {
 
     dblist.insertAt(0, 10)
     dblist.insertAt(0, 1)
-    dblist.insertAt(0, 15)
+    dblist.insertAt(0, 10)
     dblist.show
     println()
 
@@ -27,7 +27,7 @@ object Main {
     dblist.show
     println()
 
-    println(dblist.size)
+//    println(dblist.size)
 
 //    dblist.remove(45)
 //    dblist.remove(1)
@@ -36,6 +36,8 @@ object Main {
 //    dblist.remove(10)
     dblist.removeAt(1)
     dblist.show
+
+    println("Quantidade: " + dblist.count(10))
 
   }
 

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e13003a8-5167-46ec-8128-63b22c9a2078" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/doublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/doublyLinkedList.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,16 +35,16 @@
       <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="125">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
                 <element signature="e#613#1005#0" />
                 <element signature="e#1009#1079#0" />
                 <element signature="e#1083#1354#0" />
+                <element signature="e#1358#1728#0" />
                 <element signature="e#1732#2230#0" />
                 <element signature="e#2234#2566#0" />
                 <element signature="e#2570#3092#0" />
-                <element signature="e#3096#3363#0" />
               </folding>
             </state>
           </provider>
@@ -66,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -77,13 +74,15 @@
       <file leaf-file-name="doublyLinkedList.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="122" column="42" lean-forward="true" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
+            <state relative-caret-position="461">
+              <caret line="92" column="3" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
               <folding>
                 <element signature="e#783#2026#0" />
                 <element signature="e#2030#2100#0" />
                 <element signature="e#2158#2191#0" />
                 <element signature="e#2387#3233#0" />
+                <element signature="e#3237#3746#0" />
+                <element signature="e#3844#4121#0" />
               </folding>
             </state>
           </provider>
@@ -363,12 +362,12 @@
       <workItem from="1524139888159" duration="19536000" />
       <workItem from="1524575292230" duration="6906000" />
       <workItem from="1524693085875" duration="1260000" />
-      <workItem from="1524629147104" duration="1023000" />
+      <workItem from="1524629147104" duration="2773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117065000" />
+    <option name="totallyTimeSpent" value="118815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -448,7 +447,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -471,6 +470,8 @@
             <element signature="e#2030#2100#0" />
             <element signature="e#2158#2191#0" />
             <element signature="e#2387#3233#0" />
+            <element signature="e#3237#3746#0" />
+            <element signature="e#3844#4121#0" />
           </folding>
         </state>
       </provider>
@@ -490,10 +491,10 @@
             <element signature="e#613#1005#0" />
             <element signature="e#1009#1079#0" />
             <element signature="e#1083#1354#0" />
+            <element signature="e#1358#1728#0" />
             <element signature="e#1732#2230#0" />
             <element signature="e#2234#2566#0" />
             <element signature="e#2570#3092#0" />
-            <element signature="e#3096#3363#0" />
           </folding>
         </state>
       </provider>
@@ -524,6 +525,8 @@
             <element signature="e#2030#2100#0" />
             <element signature="e#2158#2191#0" />
             <element signature="e#2387#3233#0" />
+            <element signature="e#3237#3746#0" />
+            <element signature="e#3844#4121#0" />
           </folding>
         </state>
       </provider>
@@ -591,10 +594,10 @@
             <element signature="e#613#1005#0" />
             <element signature="e#1009#1079#0" />
             <element signature="e#1083#1354#0" />
+            <element signature="e#1358#1728#0" />
             <element signature="e#1732#2230#0" />
             <element signature="e#2234#2566#0" />
             <element signature="e#2570#3092#0" />
-            <element signature="e#3096#3363#0" />
           </folding>
         </state>
       </provider>
@@ -628,10 +631,10 @@
             <element signature="e#613#1005#0" />
             <element signature="e#1009#1079#0" />
             <element signature="e#1083#1354#0" />
+            <element signature="e#1358#1728#0" />
             <element signature="e#1732#2230#0" />
             <element signature="e#2234#2566#0" />
             <element signature="e#2570#3092#0" />
-            <element signature="e#3096#3363#0" />
           </folding>
         </state>
       </provider>
@@ -842,31 +845,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="e#613#1005#0" />
+            <element signature="e#1009#1079#0" />
+            <element signature="e#1083#1354#0" />
+            <element signature="e#1358#1728#0" />
+            <element signature="e#1732#2230#0" />
+            <element signature="e#2234#2566#0" />
+            <element signature="e#2570#3092#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="122" column="42" lean-forward="true" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
+        <state relative-caret-position="461">
+          <caret line="92" column="3" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
           <folding>
             <element signature="e#783#2026#0" />
             <element signature="e#2030#2100#0" />
             <element signature="e#2158#2191#0" />
             <element signature="e#2387#3233#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-          <folding>
-            <element signature="e#613#1005#0" />
-            <element signature="e#1009#1079#0" />
-            <element signature="e#1083#1354#0" />
-            <element signature="e#1732#2230#0" />
-            <element signature="e#2234#2566#0" />
-            <element signature="e#2570#3092#0" />
-            <element signature="e#3096#3363#0" />
+            <element signature="e#3237#3746#0" />
+            <element signature="e#3844#4121#0" />
           </folding>
         </state>
       </provider>
@@ -874,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
