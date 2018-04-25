@@ -99,9 +99,9 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def elementAt(pos: Int): Option[T] = {
     if (isEmpty == false) {
-      print("PrintElementAt:\n")
-      print("End: " + end.value)
-      print("\nEnd.Previous: " + end.prevNode.value + "\n")
+//      print("PrintElementAt:\n")
+//      print("End: " + end.value)
+//      print("\nEnd.Previous: " + end.prevNode.value + "\n")
       if (pos >= 0 && pos <= _size - 1) {
         val currentNode: doublyNodeList[T] = nodePointer(pos)
         return Some(currentNode.value)
@@ -171,9 +171,9 @@ class doublyLinkedList[T] extends traitList[T] {
       }
       else {
         val currentNode = nodePointer(pos)
-        println("Current Node Value: " + currentNode.value)
-        println("End Value: " + end.value)
-        println("End Value -> prev Node: " + end.prevNode.value)
+//        println("Current Node Value: " + currentNode.value)
+//        println("End Value: " + end.value)
+//        println("End Value -> prev Node: " + end.prevNode.value)
         currentNode.prevNode.nextNode = currentNode.nextNode
         currentNode.nextNode.prevNode = currentNode.prevNode
       }
@@ -203,18 +203,14 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def filter(func: T => Boolean): Boolean = {
     var sizeAUX = _size
-//    var i = 0
-    if (isEmpty == false) {
-      var currentNode: doublyNodeList[T] = head
-      for (i <- 0 until _size) {
-        if (func(currentNode.value) == true) {
-          removeAt(i)
-          sizeAUX -= 1
-        }
-        else {
-          currentNode = currentNode.nextNode
-        }
+    var i = 0
+
+    while(i < sizeAUX) {
+      if(func(elementAt(i).get)) {
+        sizeAUX -= 1
+        removeAt(i)
       }
+      else i += 1
     }
     return sizeAUX != _size
   }
