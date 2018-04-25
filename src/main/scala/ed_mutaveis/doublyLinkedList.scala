@@ -1,7 +1,7 @@
 package ed_mutaveis
 
 
-case class doublyNodeList[T](value: T, var prevNode: doublyNodeList[T], var nextNode: doublyNodeList[T])
+case class doublyNodeList[T](var value: T, var prevNode: doublyNodeList[T], var nextNode: doublyNodeList[T])
 
 class doublyLinkedList[T] extends traitList[T] {
   private var _size: Int = 0
@@ -72,7 +72,13 @@ class doublyLinkedList[T] extends traitList[T] {
     insertAt(_size, value)
   }
 
-  override def applyAll(func: T => Unit): Unit = ???
+  override def applyAll(func: T => T): Unit = {
+    var currentNode: doublyNodeList[T] = head
+    for (i <- 0 until _size) {
+      currentNode.value = func(currentNode.value)
+      currentNode = currentNode.nextNode
+    }
+  }
 
   override def clear: Unit = {
 

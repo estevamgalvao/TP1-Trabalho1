@@ -165,5 +165,5 @@ class linkedList[T] extends traitList[T] {
 
   override def sort: Unit = ???
 
-  override def applyAll(func: T => Unit): Unit = ???
+  override def applyAll(func: T => T): Unit = ???
 }

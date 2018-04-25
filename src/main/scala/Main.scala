@@ -6,6 +6,10 @@ import ed_mutaveis.doublyLinkedList
 object Main {
 
   def par(num: Int): Boolean = num%2 == 0
+  def x2(num: Int): Int = {
+    var newNum: Int = num*2
+    return newNum
+  }
 
   def main(args: Array[String]): Unit = {
     var k = 1
@@ -19,11 +23,11 @@ object Main {
     dblist.show
     k+=1
 
-    dblist.filter(par)
+    dblist.applyAll(x2)
     println("\n" + k + "º Show:")
     dblist.show
     k+=1
-    
-  }
 
+
+  }
 }
