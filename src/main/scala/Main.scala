@@ -10,10 +10,31 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
-    var dblist = new doublyLinkedList[Int]
+    val dblist = new doublyLinkedList[Int]
+    val list = new linkedList[Int]
+
 
     dblist.insertAt(0, 10)
     dblist.insertAt(0, 1)
+    dblist.insertAt(0, 15)
+    dblist.show
+    println()
+
+
+
+    dblist.insertAt(2, 3)
+    dblist.insert(45)
+    dblist.show
+    println()
+
+    println(dblist.size)
+
+//    dblist.remove(45)
+//    dblist.remove(1)
+//    dblist.remove(3)
+//    dblist.remove(15)
+//    dblist.remove(10)
+    dblist.removeAt(1)
     dblist.show
 
   }

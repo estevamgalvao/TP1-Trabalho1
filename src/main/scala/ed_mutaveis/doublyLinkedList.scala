@@ -12,6 +12,7 @@ class doublyLinkedList[T] extends traitList[T] {
     if ((_size - pos) >= pos) {
       var currentNode: doublyNodeList[T] = head
       for (i <- 0 until pos) {
+//        println("Variável i: " + i + "\nCurrent Node: " + currentNode.value)
         currentNode = currentNode.nextNode
       }
       return currentNode
@@ -78,7 +79,6 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def find(value: T): Option[Int] = ???
 
-
   override def isEmpty: Boolean = _size == 0
 
   override def remove(value: T): Boolean = {
@@ -111,7 +111,30 @@ class doublyLinkedList[T] extends traitList[T] {
     return false
   }
 
-  override def removeAt(pos: Int): Boolean = ???
+  override def removeAt(pos: Int): Boolean = {
+    if (pos >= 0 && pos <= _size) {
+      if (pos == 0) {
+        head = head.nextNode
+      }
+      else if (pos == _size){
+        end = end.prevNode
+      }
+      else {
+        val currentNode = nodePointer(pos)
+//        println("Current Node Value: " + currentNode.value)
+//        println("Head Value: " + head.value)
+        currentNode.prevNode.nextNode = currentNode.nextNode
+        currentNode.nextNode.prevNode = currentNode.prevNode
+      }
+      _size -= 1
+      return true
+    }
+    else{
+      println("invalid position")
+      return false
+    }
+
+  }
 
   override def filter(func: T => Boolean): Boolean = ???
 
