@@ -19,7 +19,7 @@ class doublyLinkedList[T] extends traitList[T] {
     }
     else {
       var currentNode: doublyNodeList[T] = end
-      for (i <- pos until _size) {
+      for (i <- pos until _size - 1) {
         currentNode = currentNode.prevNode
       }
       //println("Value nodePointer: " + currentNode.value)
@@ -28,6 +28,10 @@ class doublyLinkedList[T] extends traitList[T] {
   }
 
   override def insertAt(pos: Int, value: T): Boolean = {
+    //*****Esse comentário está errado, mas não lembro como resolvi********
+    //A função inserir ao me ver pode ficar"<= size" porque é plausível que você queira inserir na posição após o último
+    //porém acaba sendo a mesma coisa que inserir na posição do último, porque ela acaba empurrando_todo mundo pra trás
+    //0(10) 1(20) 2(15) 3(40) 4(33) -> pos4(41)=> 0(10) 1(20) 2(15) 3(40) 4(41) 5(33)
     if (pos >= 0 && pos <= _size) {
       if (head == null) {
         head = doublyNodeList(value, null, null )
@@ -51,10 +55,11 @@ class doublyLinkedList[T] extends traitList[T] {
         end.prevNode.nextNode = end
       }
       else {
-        val currentNode = nodePointer(pos - 1)
+        var currentNode = nodePointer(pos - 1)
         //Faço o novo elemento -cN.next pois será adicionado na frente- apontar para o .next do antigo "currentNode"
-        // antigo -> current -> antigo.next
+        //antigo -> current -> antigo.next
         currentNode.nextNode = doublyNodeList[T](value, currentNode, currentNode.nextNode)
+        currentNode = currentNode.nextNode //ISSO AQUI RESOLVEU O PROBLEMA Q N LIGAVA DIREITO QUANDO ENTRAVA NESSE IF
         currentNode.nextNode.prevNode = currentNode
       }
       _size += 1
@@ -92,7 +97,21 @@ class doublyLinkedList[T] extends traitList[T] {
       return 0
   }
 
-  override def elementAt(pos: Int): Option[T] = ???
+  override def elementAt(pos: Int): Option[T] = {
+    if (isEmpty == false) {
+      print("PrintElementAt:\n")
+      print("End: " + end.value)
+      print("\nEnd.Previous: " + end.prevNode.value + "\n")
+      if (pos >= 0 && pos <= _size - 1) {
+        val currentNode: doublyNodeList[T] = nodePointer(pos)
+        return Some(currentNode.value)
+      }
+      else {
+        return None
+      }
+    }
+    else return None
+  }
 
   override def find(value: T): Option[Int] = {
     if (isEmpty == false) {
@@ -125,7 +144,7 @@ class doublyLinkedList[T] extends traitList[T] {
     }
     else {
       var currentNode = head.nextNode
-      for (i <- 1 until _size-1) {
+      for (i <- 1 until _size - 1) {
         //println("Current Node -> Valor: " + currentNode.value)
         //println("Current Node -> NextNode: " + currentNode.nextNode.value)
         if (currentNode.value == value) {
@@ -143,17 +162,18 @@ class doublyLinkedList[T] extends traitList[T] {
   }
 
   override def removeAt(pos: Int): Boolean = {
-    if (pos >= 0 && pos <= _size) {
+    if (pos >= 0 && pos <= _size - 1) {
       if (pos == 0) {
         head = head.nextNode
       }
-      else if (pos == _size){
+      else if (pos == _size - 1){
         end = end.prevNode
       }
       else {
         val currentNode = nodePointer(pos)
-//        println("Current Node Value: " + currentNode.value)
-//        println("Head Value: " + head.value)
+        println("Current Node Value: " + currentNode.value)
+        println("End Value: " + end.value)
+        println("End Value -> prev Node: " + end.prevNode.value)
         currentNode.prevNode.nextNode = currentNode.nextNode
         currentNode.nextNode.prevNode = currentNode.prevNode
       }
@@ -165,10 +185,6 @@ class doublyLinkedList[T] extends traitList[T] {
       return false
     }
   }
-
-  override def filter(func: T => Boolean): Boolean = ???
-
-  override def reverse: Unit = ???
 
   override def show: Unit = {
     if (isEmpty == false) {
@@ -185,6 +201,26 @@ class doublyLinkedList[T] extends traitList[T] {
 
   override def size: Int = _size
 
+  override def filter(func: T => Boolean): Boolean = {
+    var sizeAUX = _size
+//    var i = 0
+    if (isEmpty == false) {
+      var currentNode: doublyNodeList[T] = head
+      for (i <- 0 until _size) {
+        if (func(currentNode.value) == true) {
+          removeAt(i)
+          sizeAUX -= 1
+        }
+        else {
+          currentNode = currentNode.nextNode
+        }
+      }
+    }
+    return sizeAUX != _size
+  }
+
   override def sort: Unit = ???
+
+  override def reverse: Unit = ???
 
 }
