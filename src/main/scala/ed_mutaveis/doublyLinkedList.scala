@@ -5,10 +5,10 @@ case class doublyNodeList[T](var value: T, var prevNode: doublyNodeList[T], var 
 
 class doublyLinkedList[T] extends traitList[T] {
   private var _size: Int = 0
-  protected var head: doublyNodeList[T] = _
-  protected var end: doublyNodeList[T] = _
+  private var head: doublyNodeList[T] = _
+  private var end: doublyNodeList[T] = _
 
-  private def nodePointer(pos: Int): doublyNodeList[T] = {
+  def nodePointer(pos: Int): doublyNodeList[T] = {
     if ((_size - pos) >= pos) {
       var currentNode: doublyNodeList[T] = head
       for (i <- 0 until pos) {
@@ -28,10 +28,6 @@ class doublyLinkedList[T] extends traitList[T] {
   }
 
   override def insertAt(pos: Int, value: T): Boolean = {
-    //*****Esse comentário está errado, mas não lembro como resolvi********
-    //A função inserir ao me ver pode ficar"<= size" porque é plausível que você queira inserir na posição após o último
-    //porém acaba sendo a mesma coisa que inserir na posição do último, porque ela acaba empurrando_todo mundo pra trás
-    //0(10) 1(20) 2(15) 3(40) 4(33) -> pos4(41)=> 0(10) 1(20) 2(15) 3(40) 4(41) 5(33)
     if (pos >= 0 && pos <= _size) {
       if (head == null) {
         head = doublyNodeList(value, null, null )
@@ -65,7 +61,10 @@ class doublyLinkedList[T] extends traitList[T] {
       _size += 1
       return true
     }
-    else println("invalid position"); return false
+    else {
+      println("invalid position")
+      return false
+    }
   }
 
   override def insert(value: T): Unit = {
@@ -81,7 +80,9 @@ class doublyLinkedList[T] extends traitList[T] {
   }
 
   override def clear: Unit = {
-
+    for (i <- 0 until _size){
+      removeAt(0)
+    }
   }
 
   override def count(value: T): Int = {
@@ -195,10 +196,12 @@ class doublyLinkedList[T] extends traitList[T] {
   override def show: Unit = {
     if (isEmpty == false) {
       var currentNode: doublyNodeList[T] = head
+      print("[ ")
       for (i <- 0 until _size) {
-        println(currentNode.value)
+        print(currentNode.value + " ")
         currentNode = currentNode.nextNode
       }
+      print("]")
     }
     else {
       println("empty list")
