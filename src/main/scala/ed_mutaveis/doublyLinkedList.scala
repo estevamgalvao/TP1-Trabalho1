@@ -5,8 +5,8 @@ case class doublyNodeList[T](var value: T, var prevNode: doublyNodeList[T], var 
 
 class doublyLinkedList[T] extends traitList[T] {
   private var _size: Int = 0
-  private var head: doublyNodeList[T] = _
-  private var end: doublyNodeList[T] = _
+  protected var head: doublyNodeList[T] = _
+  protected var end: doublyNodeList[T] = _
 
   private def nodePointer(pos: Int): doublyNodeList[T] = {
     if ((_size - pos) >= pos) {

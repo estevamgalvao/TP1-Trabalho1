@@ -8,7 +8,7 @@ case class nodeList[T](value: T, var nextNode: nodeList[T]) //val serve para a l
 
 class linkedList[T] extends traitList[T] {
   private var _size: Int = 0
-  private var head: nodeList[T] = _
+  protected var head: nodeList[T] = _
   
   private def nodePointer(pos: Int): nodeList[T] = {
     var nodePointer: nodeList[T] = head
@@ -46,7 +46,7 @@ class linkedList[T] extends traitList[T] {
     if (isEmpty == false) {
       var currentNode: nodeList[T] = head
       for (i <- 0 until _size) {
-        println(currentNode.value)
+        print(currentNode.value+" ")
         currentNode = currentNode.nextNode
       }
     }
