@@ -12,15 +12,20 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val dblist = new doublyLinkedList[Int]
+    val list1 = new linkedList[Int]
+
     var k: Int = 10
 
     while (k != 0) {
       dblist.insert(k*k)
+      list1.insert(k*k)
       k -= 1
     }
 
-    print("Doubly List 1: ")
+    println("Doubly List 1: ")
     dblist.show
+    println("\nLinked List 1: ")
+    list1.show
     println("\n" + dblist.elementAt(dblist.size - 1))
 
     val it = new doublylistIterator[Int](dblist)
@@ -33,8 +38,6 @@ object Main {
 
     dblist.clear
     dblist.show
-
-
 
   }
 }

@@ -45,10 +45,12 @@ class linkedList[T] extends traitList[T] {
   override def show: Unit = {
     if (isEmpty == false) {
       var currentNode: nodeList[T] = head
+      print("[ ")
       for (i <- 0 until _size) {
-        print(currentNode.value+" ")
+        print(currentNode.value + " ")
         currentNode = currentNode.nextNode
       }
+      print("]")
     }
     else {
       println("empty list")
