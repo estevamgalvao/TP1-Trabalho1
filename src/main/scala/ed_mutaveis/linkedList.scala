@@ -10,7 +10,7 @@ class linkedList[T] extends traitList[T] {
   private var _size: Int = 0
   protected var head: nodeList[T] = _
   
-  private def nodePointer(pos: Int): nodeList[T] = {
+  def nodePointer(pos: Int): nodeList[T] = {
     var nodePointer: nodeList[T] = head
     for (i <- 0 until pos){
       nodePointer = nodePointer.nextNode
