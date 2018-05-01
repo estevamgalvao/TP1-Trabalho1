@@ -1,15 +1,23 @@
 package ed_mutaveis
 
 import java.security.KeyStore.TrustedCertificateEntry
+
 import scala.io
 import scala.io.StdIn
+import scala.reflect.ClassTag
 
 case class nodeList[T](value: T, var nextNode: nodeList[T]) //val serve para a lista imutável e var seria mutável
 
 class linkedList[T] extends traitList[T] {
   private var _size: Int = 0
   protected var head: nodeList[T] = _
-  
+//  protected val _type: ClassTag[T] = (ClassTag: T).getClass.getSimpleName
+//    Class[T].asInstanceOf
+
+
+//  println("Type: " +  (ClassTag[T]).getClass.getSimpleName)
+//    Class[T].getClass.getSimpleName)
+
   def nodePointer(pos: Int): nodeList[T] = {
     var nodePointer: nodeList[T] = head
     for (i <- 0 until pos){

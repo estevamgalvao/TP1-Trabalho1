@@ -1,7 +1,4 @@
 package ed_mutaveis
-import ed_mutaveis.linkedList
-
-
 
 class linkedListIterator[T](list: linkedList[T]) extends traitListIterator[T] {
   var currentNode: nodeList[T] = list.nodePointer(0)
@@ -59,7 +56,6 @@ class linkedListIterator[T](list: linkedList[T]) extends traitListIterator[T] {
     }
     else println("endline")
   }
-
 
   override def next: Option[T] = {
     if (currentNode.nextNode != null) {
