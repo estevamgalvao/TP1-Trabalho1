@@ -29,6 +29,20 @@ class linkedListSpec extends FlatSpec with Matchers {
     lList.elementAt(2) should be(Some(2))
   }
 
+  it should "push elements backwards when removing elements in the middle of the list" in {
+    val lList = new linkedList[Int]
+    lList.insert(1)
+    lList.insert(2)
+    lList.insert(3)
+    lList.insert(4)
+
+    lList.elementAt(1) should be (Some(2))
+    lList.elementAt(2) should be (Some(3))
+    lList.removeAt(1)
+    lList.elementAt(1) should be (Some(3))
+    lList.elementAt(2) should be (Some(4))
+  }
+
   it should "find elements" in {
     val lList = new linkedList[Int]
     lList.insert(1)

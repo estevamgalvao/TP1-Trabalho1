@@ -21,12 +21,25 @@ class doublyLinkedListSpec extends FlatSpec with Matchers {
   }
 
   it should "push elements forward when inserting in a occupied position" in{
-    val dList3 = new doublyLinkedList[Int]
-    dList3.insert(1)
-    dList3.insertAt(1,2)
-    dList3.insertAt(1,3)
+    val dList = new doublyLinkedList[Int]
+    dList.insert(1)
+    dList.insertAt(1,2)
+    dList.insertAt(1,3)
 
-    dList3.elementAt(2) should be (Some(2))
+    dList.elementAt(2) should be (Some(2))
+  }
+  it should "push elements backwards when removing elements in the middle of the list" in {
+    val dList = new doublyLinkedList[Int]
+    dList.insert(1)
+    dList.insert(2)
+    dList.insert(3)
+    dList.insert(4)
+
+    dList.elementAt(1) should be (Some(2))
+    dList.elementAt(2) should be (Some(3))
+    dList.removeAt(1)
+    dList.elementAt(1) should be (Some(3))
+    dList.elementAt(2) should be (Some(4))
   }
 
   it should "find elements" in{
