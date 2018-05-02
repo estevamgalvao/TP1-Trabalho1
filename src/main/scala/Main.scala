@@ -22,7 +22,7 @@ import ed_mutaveis.linkedListIterator
 
 
 object Main {
-  def vezesleomba(value: Int): Int = {
+  def multPrime(value: Int): Int = {
     val aux: Int = (value * 265443576)%100
     return aux
   }
@@ -30,16 +30,16 @@ object Main {
   def main(args: Array[String]): Unit = {
     val dblist = new doublyLinkedList[Int]
     val list1 = new linkedList[Int]
-    val dic1 = new hashTable[Int](100, vezesleomba)
+    val dic1 = new hashTable[Int](100, multPrime)
 
     dic1.insert(1)
     dic1.insert(23123)
     dic1.insert(343)
     dic1.show
 
-    println()
+    println("\nCheck: " + dic1.check(23123).getOrElse())
 
-    dic1.remove(343)
+    dic1.remove(3143)
     dic1.removeAt(76)
     dic1.show
 

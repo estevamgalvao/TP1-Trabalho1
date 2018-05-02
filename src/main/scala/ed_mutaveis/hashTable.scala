@@ -1,6 +1,6 @@
 package ed_mutaveis
 
-class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashtable[T] {
+class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
   private val _array: Array[doublyLinkedList[T]] = new Array[doublyLinkedList[T]](size)
 
   for (i <- 0 until size) {
@@ -25,16 +25,16 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashtable[T] {
 //    _array(hashFunc(value)).show
   }
 
-  override def check(value: T): Boolean = {
+  override def check(value: T): Option[Int] = {
     if (_array(hashFunc(value)).size == 0) {
       println("there is nothing")
-      return false
+      None
     }
     else {
-      if (_array(hashFunc(value)).find(value) != None) {
-        return true
+      if (_array(hashFunc(value)).find(value).isDefined) {
+        Some(hashFunc(value))
       }
-      else return false
+      else None
     }
   }
 
@@ -53,9 +53,8 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashtable[T] {
     _array(key).removeAt(_array(key).size - 1)
   }
 
-  def show: Unit = {
+  override def show: Unit = {
     var i: Int = 0
-
     while (i < size) {
       if (_array(i).size != 0) {
         for (j <- 0 until _array(i).size) {
@@ -64,7 +63,6 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashtable[T] {
       }
       i += 1
     }
-
   }
 
 
