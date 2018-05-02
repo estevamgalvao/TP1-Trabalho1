@@ -65,5 +65,7 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
     }
   }
 
+//  override def size: Int = ???
+
 
 }

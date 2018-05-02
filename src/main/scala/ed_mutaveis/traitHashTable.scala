@@ -6,5 +6,5 @@ trait traitHashTable[T] {
   def remove(value: T): Boolean
   def removeAt(key: Int): Boolean
   def show: Unit
-  def size: Int
+//  def size: Int
 }
