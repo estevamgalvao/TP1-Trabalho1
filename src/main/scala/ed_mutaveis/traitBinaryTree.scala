@@ -5,9 +5,13 @@ trait traitBinaryTree[T] {
   def remove(value: T): Boolean
   def updateHead(value: T): Unit
   def size: Int
+  def show: Unit
 
 
-
+/*fazer função show recusiva, lendo todos os nós da direita
+então quando eu passar para outro nó chamar a função novamente
+e andar entre os nós esquerda e direita
+ */
 
 
 }
