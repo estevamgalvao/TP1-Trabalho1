@@ -43,15 +43,21 @@ object Main {
     tree1.insert(15)
     tree1.insert(8)
     tree1.insert(7)
-    tree1.insert(9)
-    print(tree1.remove(33))
+//    tree1.insert(6)
+//    tree1.insert(9)
+    println()
+    tree1.show
+    println(tree1.size)
+    tree1.insert(17)
+    print(tree1.remove(15))
+    println()
+    tree1.show
+    println(tree1.size)
 
 
 
 
-
-
-//    dic1.insert(1)
+    //    dic1.insert(1)
 //    dic1.insert(23123)
 //    dic1.insert(343)
 //    dic1.show

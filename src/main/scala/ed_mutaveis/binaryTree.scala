@@ -29,36 +29,40 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
       return Some(currentNode)
     }
 
-    else {
+    else if (mode == 1) {
       while (verifier) {
-        println("Current Node: " + currentNode.value)
-        /* Indo para a direita */
+        /*Indo para a direita*/
         if (func(value, currentNode.value)) {
-          if (currentNode.rightNode != null) { // Verifico se o próximo é nulo para conseguir comparar
-            if (currentNode.rightNode.value == value) verifier = false
-            else currentNode = currentNode.rightNode
+          if (currentNode.rightNode != null) {
+            if (currentNode.rightNode.value == value) {
+              currentNode = currentNode.rightNode
+              return Some(currentNode)
+            }
+            else {
+              currentNode = currentNode.rightNode
+            }
           }
-          else {
-            println("there is nothing")
-            return None
-//            verifier = false
-          }
+          else verifier = false
         }
-
-        /* Indo para a esquerda */
+          /*Indo para esquerda*/
         else {
           if (currentNode.leftNode != null) {
-            if (currentNode.leftNode.value == value) verifier = false
-            else currentNode = currentNode.leftNode
+            if (currentNode.leftNode.value == value) {
+              currentNode = currentNode.leftNode
+              return Some(currentNode)
+            }
+            else {
+              currentNode = currentNode.leftNode
+            }
           }
-          else {
-            println("there is nothing")
-            return None
-//            verifier = false
-          }
+          else verifier = false
         }
       }
-      return Some(currentNode)
+      return None
+    }
+
+    else {
+      return None
     }
   }
 
@@ -81,33 +85,50 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
   }
 
   override def remove(value: T): Boolean = {
-    if (_size == 0) {
-      root = null
-      return true
-    }
-    else {
-      if (findLeaf(value, 1) != None) {
-        val nodeAux: nodeTree[T] = findLeaf(value, 1).get
-
-        if (func(value, nodeAux.value)) {
-          nodeAux.leftNode = null
+    val nodeAux = findLeaf(value, 1).getOrElse(null)
+//    if (nodeAux == root) {
+//      if (nodeAux.rightNode != null) {
+//
+//      }
+//    }
+    if (nodeAux != null) {
+      if (nodeAux.leftNode != null) {
+        println("NodeAUX: " + nodeAux.value)
+        nodeAux.fatherNode.leftNode = nodeAux.leftNode
+        nodeAux.leftNode.fatherNode = nodeAux.fatherNode
+        _size -= 1
+        return true
+      }
+      if (nodeAux.rightNode != null) {
+        nodeAux.fatherNode.rightNode = nodeAux.rightNode
+        nodeAux.rightNode.fatherNode = nodeAux.fatherNode
+        _size -= 1
+        return true
+      }
+      else {
+        if (func(value,nodeAux.fatherNode.value)) {
+          nodeAux.fatherNode.rightNode = nodeAux.rightNode
+          nodeAux.fatherNode = null
           _size -= 1
           return true
         }
         else {
-          nodeAux.rightNode = null
+          nodeAux.fatherNode.leftNode = nodeAux.leftNode
+          nodeAux.fatherNode = null
           _size -= 1
           return true
         }
       }
-      else false
     }
+    else return false
   }
 
+
   override def show: Unit = {
-
-
-
+    println("Root: " + root.value)
+    println("Root -> Left: " + root.leftNode.value)
+    println("Root -> Right: " + root.rightNode.value)
+//    println("Root -> Left -> Left: " + root.leftNode.leftNode.value)
 
   }
 
