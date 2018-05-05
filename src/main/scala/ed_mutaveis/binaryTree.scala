@@ -69,67 +69,99 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
   override def remove(value: T): Unit = {
     if (_size == 0) {
       println("empty tree")
-//      return false
+      //      return false
     }
     else {
       var currentNode = searchValue(value, root)
       val auxNode = currentNode
-      /* Retiro quando está balanceada */
+      var leftCounter: Boolean = true
+      /* Se há elemento na direita, eu dou um passo pra direita */
       if (currentNode.rightNode != null) {
-        /* Se há elemento na direita, eu dou um passo pra direita */
         currentNode = currentNode.rightNode
+
         /* Enquanto houver elemento na esquerda, ando pra esquerda */
         while (currentNode.leftNode != null) {
           currentNode = currentNode.leftNode
+          leftCounter = false
         }
-        /* Verifico se meu último elemento da esquerda tiver elemento na direta */
-        if (currentNode.rightNode != null) {
-          println("dios mio")
-        }
-        else {
-          //          println("XUBIRABIRON")
-          currentNode.leftNode = auxNode.leftNode
-//          println("AuxNode -> Left: " + auxNode.leftNode.value)
-//          println("Current -> Left: " + currentNode.leftNode.value)
-          currentNode.rightNode = auxNode.rightNode
-          val father = currentNode.fatherNode
-//          println("Father: " + father.value)
-          currentNode.fatherNode = auxNode.fatherNode
-//          println("Current -> Father: " + currentNode.fatherNode.value)
-//          println("Root: " + root.value)
-//          println("Current -> Father -> PréLeft: " + currentNode.fatherNode.leftNode.value)
-          currentNode.fatherNode.leftNode = currentNode
-//          println("Current -> Father -> PósLeft: " + currentNode.fatherNode.leftNode.value)
-//          println("Current -> Father -> Left -> Left: " + currentNode.fatherNode.leftNode.leftNode.value)
-//          println("Current -> Father -> Left -> Right: " + currentNode.fatherNode.leftNode.rightNode.value)
-//          println("Root -> Father -> Left -> Left: " + root.leftNode.leftNode.value)
-          auxNode.fatherNode = father
 
+        /* Não demos passo para a esquerda -> 1º e 2º caso*/
+        if (leftCounter == true) {
+          /*Algoritmo normal sem atualizar o cur.R*/
+          currentNode.leftNode = auxNode.leftNode
+          currentNode.leftNode.fatherNode = currentNode
+
+          currentNode.fatherNode = auxNode.fatherNode
+          if (func(value, currentNode.fatherNode.value)) {
+            currentNode.fatherNode.rightNode = currentNode
+          }
+          else {
+            currentNode.fatherNode.leftNode = currentNode
+          }
+          _size -= 1
+        }
+        /* Demos passo para esquerda */
+        else {
+          /*Demos passo para a esquerda e temos direita -> 3º caso*/
+          if (currentNode.rightNode != null) {
+            /*Adaptação para o caso da andei pra esqueda e tem direita*/
+            currentNode.fatherNode.leftNode = currentNode.rightNode
+            currentNode.rightNode.fatherNode = currentNode.fatherNode
+            /*Algoritmo normal*/
+            currentNode.leftNode = auxNode.leftNode
+            currentNode.leftNode.fatherNode = currentNode
+
+            currentNode.rightNode = auxNode.rightNode
+            currentNode.rightNode.fatherNode = currentNode
+
+            currentNode.fatherNode = auxNode.fatherNode
+            if (func(value, currentNode.fatherNode.value)) {
+              currentNode.fatherNode.rightNode = currentNode
+            }
+            else {
+              currentNode.fatherNode.leftNode = currentNode
+            }
+            _size -= 1
+          }
+
+          /*Demos passo para a esquerda e não temos direita -> 5º caso*/
+          else {
+            currentNode.leftNode = auxNode.leftNode
+            currentNode.leftNode.fatherNode = currentNode
+
+            currentNode.rightNode = auxNode.rightNode
+            currentNode.rightNode.fatherNode = currentNode
+
+            currentNode.fatherNode = auxNode.fatherNode
+            if (func(value, currentNode.fatherNode.value)) {
+              currentNode.fatherNode.rightNode = currentNode
+            }
+            else {
+              currentNode.fatherNode.leftNode = currentNode
+            }
+            _size -= 1
+          }
         }
       }
-      /* Retiro quando o X a ser retirado não tem árvore na direita */
+      /*Não temos direita -> 4º caso*/
       else {
-        if (func(value, currentNode.value)) {
-          currentNode.rightNode.fatherNode = currentNode.fatherNode
-          currentNode.fatherNode.rightNode = currentNode.rightNode
-        }
-        else {
-          currentNode.leftNode.fatherNode = currentNode.fatherNode
-          currentNode.fatherNode.leftNode = currentNode.leftNode
-        }
+        currentNode.fatherNode.leftNode = currentNode.leftNode
+        currentNode.leftNode.fatherNode = currentNode.fatherNode
+        _size -= 1
       }
     }
-
-
-
   }
 
   override def show: Unit = {
     println("[" + root.value + "]")
-    println("[" + root.leftNode.value + "]")
-    println("Root -> Father -> Left -> Left: " + root.leftNode.leftNode.value)
-//    println("[" + root.leftNode.leftNode.value + "]     [" + root.leftNode.rightNode.value + "]" )
-//  println("[" + root.leftNode.leftNode.leftNode.value + "]  [" + root.leftNode.leftNode.rightNode.value + "]       ["
+    println("[" + root.leftNode.value + "]" + "[" + root.rightNode.value + "]")
+    print("[" + root.leftNode.leftNode.value + "]     [" + root.leftNode.rightNode.value + "]    " )
+    println("[" + root.rightNode.leftNode.value + "]     [" + root.rightNode.rightNode.value + "]" )
+    println("[" + root.leftNode.rightNode.rightNode.value + "]")
+
+    //    println("[" + root.rightNode.rightNode.leftNode.value + "]" + "    [" + root.rightNode.rightNode.rightNode.value + "]")
+
+    //     println("[" + root.leftNode.leftNode.leftNode.value + "]  [" + root.leftNode.leftNode.rightNode.value + "]       ["
 //    + root.leftNode.rightNode.leftNode.value + "]  [" + root.leftNode.rightNode.rightNode.value + "]" )
 
   }
