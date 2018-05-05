@@ -39,23 +39,24 @@ object Main {
     val dic1 = new hashTable[Int](100, multPrime)
     val tree1 = new binaryTree[Int](compare)
 
-    tree1.insert(10)
-    tree1.insert(15)
+    tree1.insert(50)
+    tree1.insert(20)
     tree1.insert(8)
-    tree1.insert(7)
-//    tree1.insert(6)
-//    tree1.insert(9)
-    println()
-    tree1.show
-    println(tree1.size)
-    tree1.insert(17)
-    print(tree1.remove(15))
-    println()
-    tree1.show
+    tree1.insert(4)
+    tree1.insert(15)
+    tree1.insert(39)
+    tree1.insert(26)
+    tree1.insert(42)
     println(tree1.size)
 
+    tree1.remove(20)
 
 
+    tree1.show
+
+
+    //    println()
+    //    tree1.show
 
     //    dic1.insert(1)
 //    dic1.insert(23123)
