@@ -41,20 +41,10 @@ object Main {
 
     tree1.insert(100)
     tree1.insert(50)
-    tree1.insert(25)
-    tree1.insert(75)
-    tree1.insert(60)
-    tree1.insert(80)
     tree1.insert(150)
-    tree1.insert(175)
-    tree1.insert(125)
 
-
-    tree1.remove(50)
+    println(tree1.exist(80))
     println(tree1.size)
-
-
-    tree1.show
 
 
     //    println()

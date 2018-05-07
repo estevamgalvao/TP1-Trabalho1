@@ -9,8 +9,6 @@ trait traitList[T] {
   def remove(value: T): Boolean
   def elementAt(pos: Int): Option[T]
   def find(value: T): Option[Int]
-  def sort: Unit
-  def reverse: Unit
   def count(value: T): Int
   def clear: Unit
   def filter(func: (T) => Boolean): Boolean

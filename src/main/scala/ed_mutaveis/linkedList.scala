@@ -6,7 +6,7 @@ import scala.io
 import scala.io.StdIn
 import scala.reflect.ClassTag
 
-case class nodeList[T](value: T, var nextNode: nodeList[T]) //val serve para a lista imutável e var seria mutável
+case class nodeList[T](var value: T, var nextNode: nodeList[T]) //val serve para a lista imutável e var seria mutável
 
 class linkedList[T] extends traitList[T] {
   private var _size: Int = 0
@@ -171,9 +171,11 @@ class linkedList[T] extends traitList[T] {
     return sizeAUX != _size
   }
 
-  override def reverse: Unit = ???
-
-  override def sort: Unit = ???
-
-  override def applyAll(func: T => T): Unit = ???
+  override def applyAll(func: T => T): Unit = {
+    var currentNode: nodeList[T] = head
+    for (i <- 0 until _size) {
+      currentNode.value = func(currentNode.value)
+      currentNode = currentNode.nextNode
+    }
+  }
 }

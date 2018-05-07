@@ -223,9 +223,4 @@ class doublyLinkedList[T] extends traitList[T] {
     }
     return sizeAUX != _size
   }
-
-  override def sort: Unit = ???
-
-  override def reverse: Unit = ???
-
 }

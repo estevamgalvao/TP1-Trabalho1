@@ -8,7 +8,7 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
   private var root: nodeTree[T] = _
   private var _size: Int = 0
   private var height: Int = 0
-//  private var emptyNode = nodeTree(null, null, null, null)
+  //  private var emptyNode = nodeTree(null, null, null, null)
 
   def searchLeaf(value: T, node: nodeTree[T]): nodeTree[T] = {
     val currentNode = node
@@ -35,10 +35,10 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
       return currentNode
     }
     else if (func(value, currentNode.value) && currentNode.rightNode != null) {
-        return searchValue(value, currentNode.rightNode)
-      }
+      return searchValue(value, currentNode.rightNode)
+    }
     else if (currentNode.leftNode != null) {
-        return searchValue(value, currentNode.leftNode)
+      return searchValue(value, currentNode.leftNode)
     }
     else {
       return null
@@ -66,7 +66,13 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
     }
   }
 
-  override def remove(value: T): Unit = {
+  override def exist(value: T): Boolean = {
+    val currentNode: nodeTree[T] = searchValue(value, root)
+    if (currentNode == null) false
+    else true
+  }
+
+  def remove(value: T): Unit = {
     if (_size == 0) {
       println("empty tree")
       //      return false
@@ -152,22 +158,6 @@ class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
     }
   }
 
-  override def show: Unit = {
-    println("[" + root.value + "]")
-    println("[" + root.leftNode.value + "]" + "[" + root.rightNode.value + "]")
-    print("[" + root.leftNode.leftNode.value + "]     [" + root.leftNode.rightNode.value + "]    " )
-    println("[" + root.rightNode.leftNode.value + "]     [" + root.rightNode.rightNode.value + "]" )
-    println("[" + root.leftNode.rightNode.rightNode.value + "]")
-
-    //    println("[" + root.rightNode.rightNode.leftNode.value + "]" + "    [" + root.rightNode.rightNode.rightNode.value + "]")
-
-    //     println("[" + root.leftNode.leftNode.leftNode.value + "]  [" + root.leftNode.leftNode.rightNode.value + "]       ["
-//    + root.leftNode.rightNode.leftNode.value + "]  [" + root.leftNode.rightNode.rightNode.value + "]" )
-
-  }
-
   override def size: Int = _size
-
-  override def updateHead(value: T): Unit = ???
 
 }
