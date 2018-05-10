@@ -1,17 +1,21 @@
 package ed_mutaveis
 import org.scalatest._
 
-class queueSpec extends FlatSpec with Matchers {
+class queueSpec extends FlatSpec with Matchers with BeforeAndAfter {
   behavior of "A Queue"
 
+  var qe : Queue[Int] = _
+
+  before{
+    qe = new Queue[Int]
+  }
+
   it should "have size = 0 / empty, before queueing any element" in {
-    val qe = new Queue[Int]
     qe.size should be (0)
     qe.isEmpty should be (true)
   }
 
   it should "correspond the correct size value for insert and pop functions" in {
-    val qe = new Queue[Int]
     qe.insert(1)
     qe.insert(2)
     qe.insert(3)
@@ -21,7 +25,6 @@ class queueSpec extends FlatSpec with Matchers {
   }
 
   it should "find elements" in {
-    val qe = new Queue[Int]
     qe.insert(1)
     qe.insert(2)
     qe.insert(3)
@@ -30,7 +33,6 @@ class queueSpec extends FlatSpec with Matchers {
   }
 
   it should "count elements" in {
-    val qe = new Queue[Int]
     qe.insert(1)
     qe.insert(2)
     qe.insert(2)
@@ -42,7 +44,6 @@ class queueSpec extends FlatSpec with Matchers {
   }
 
   it should "clear it self" in {
-    val qe = new Queue[Int]
     qe.insert(1)
     qe.insert(2)
     qe.insert(3)
@@ -53,7 +54,6 @@ class queueSpec extends FlatSpec with Matchers {
   }
 
   it should "Respect the FIFO order" in {
-    val qe = new Queue[Int]
     qe.insert(1)
     qe.insert(2)
     qe.insert(3)

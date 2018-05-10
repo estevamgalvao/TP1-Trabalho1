@@ -1,17 +1,21 @@
 package ed_mutaveis
 import org.scalatest._
 
-class stackSpec extends FlatSpec with Matchers {
+class stackSpec extends FlatSpec with Matchers with BeforeAndAfter {
   behavior of "A Stack"
 
+  var st : Stack[Int] = _
+
+  before {
+    st = new Stack[Int]
+  }
+
   it should "have size = 0 / empty, before stacking any element" in {
-    val st = new Stack[Int]
     st.size should be (0)
     st.isEmpty should be (true)
   }
 
   it should "correspond the correct size value for insert and pop functions" in {
-    val st = new Stack[Int]
     st.insert(1)
     st.insert(2)
     st.insert(3)
@@ -21,7 +25,6 @@ class stackSpec extends FlatSpec with Matchers {
   }
 
   it should "find elements" in {
-    val st = new Stack[Int]
     st.insert(1)
     st.insert(2)
     st.insert(3)
@@ -30,7 +33,6 @@ class stackSpec extends FlatSpec with Matchers {
   }
 
   it should "count elements" in {
-    val st = new Stack[Int]
     st.insert(1)
     st.insert(2)
     st.insert(2)
@@ -42,7 +44,6 @@ class stackSpec extends FlatSpec with Matchers {
   }
 
   it should "clear it self" in {
-    val st = new Stack[Int]
     st.insert(1)
     st.insert(2)
     st.insert(3)
@@ -53,8 +54,7 @@ class stackSpec extends FlatSpec with Matchers {
   }
 
   it should "Respect the LIFO order" in{
-    val st = new Stack[Int]
-    st.insert(1)
+     st.insert(1)
     st.insert(2)
     st.insert(3)
     st.insert(4)

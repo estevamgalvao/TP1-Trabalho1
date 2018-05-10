@@ -1,7 +1,7 @@
 package ed_mutaveis
 import org.scalatest._
 
-class doublylistIteratorSpec extends FlatSpec with Matchers {
+class doublyListIteratorSpec extends FlatSpec with Matchers {
   behavior of "A Doubly Linked List Iterator"
 
   val dList = new doublyLinkedList[Int]

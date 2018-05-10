@@ -1,163 +1,206 @@
 package ed_mutaveis
 
 
-case class nodeTree[T](value: T, var leftNode: nodeTree[T],
-                       var rightNode: nodeTree[T], var fatherNode: nodeTree[T])
+case class nodeTree[T <% Ordered[T]](var value: T, var leftNode: nodeTree[T] = null,
+                       var rightNode: nodeTree[T] = null)
 
-class binaryTree[T](func: (T, T) => Boolean) extends traitBinaryTree[T] {
+class binaryTree[T <% Ordered[T]] extends traitBinaryTree[T] {
   private var root: nodeTree[T] = _
-  private var _size: Int = 0
-  private var height: Int = 0
-  //  private var emptyNode = nodeTree(null, null, null, null)
-
-  def searchLeaf(value: T, node: nodeTree[T]): nodeTree[T] = {
-    val currentNode = node
-    if (currentNode.value == value) {
-      return null
-    }
-    else if (func(value, currentNode.value)) {
-      if(currentNode.rightNode != null) {
-        return searchLeaf(value, currentNode.rightNode)
-      }
-      else return currentNode
-    }
-    else {
-      if (currentNode.leftNode != null) {
-        return searchLeaf(value, currentNode.leftNode)
-      }
-      else return currentNode
-    }
-  }
-
-  def searchValue(value: T, node: nodeTree[T]): nodeTree[T] = {
-    val currentNode = node
-    if (currentNode.value == value) {
-      return currentNode
-    }
-    else if (func(value, currentNode.value) && currentNode.rightNode != null) {
-      return searchValue(value, currentNode.rightNode)
-    }
-    else if (currentNode.leftNode != null) {
-      return searchValue(value, currentNode.leftNode)
-    }
-    else {
-      return null
-    }
-  }
 
   override def insert(value: T): Unit = {
-    if (_size == 0) {
-      root = new nodeTree[T](value, null, null, null)
-      _size += 1
+    if (root == null) {
+      root = nodeTree[T](value)
+
     }
     else {
-      val currentNode: nodeTree[T] = searchLeaf(value, root)
+      val currentNode: nodeTree[T] = searchLeaf(value)
       if (currentNode != null) {
-        if (func(value, currentNode.value)) {
-          currentNode.rightNode = new nodeTree[T](value, null, null, currentNode)
-          _size += 1
+        if (value > currentNode.value) {
+          currentNode.rightNode = nodeTree[T](value)
         }
         else {
-          currentNode.leftNode = new nodeTree[T](value, null, null, currentNode)
-          _size += 1
+          currentNode.leftNode = nodeTree[T](value)
         }
       }
-      else println("already exist")
+      else println("member (" + value + ") already inserted !")
     }
   }
 
-  override def exist(value: T): Boolean = {
-    val currentNode: nodeTree[T] = searchValue(value, root)
-    if (currentNode == null) false
-    else true
-  }
 
   def remove(value: T): Unit = {
-    if (_size == 0) {
-      println("empty tree")
-      //      return false
+
+    var removedNode = searchValue(value)
+    var father = getFather(removedNode.value)
+
+    if (removedNode == null){
+      println("empty tree or value not found")
     }
     else {
-      var currentNode = searchValue(value, root)
-      val auxNode = currentNode
-      var leftCounter: Boolean = true
-      /* Se há elemento na direita, eu dou um passo pra direita */
-      if (currentNode.rightNode != null) {
-        currentNode = currentNode.rightNode
-
-        /* Enquanto houver elemento na esquerda, ando pra esquerda */
-        while (currentNode.leftNode != null) {
-          currentNode = currentNode.leftNode
-          leftCounter = false
-        }
-
-        /* Não demos passo para a esquerda -> 1º e 2º caso*/
-        if (leftCounter == true) {
-          /*Algoritmo normal sem atualizar o cur.R*/
-          currentNode.leftNode = auxNode.leftNode
-          currentNode.leftNode.fatherNode = currentNode
-
-          currentNode.fatherNode = auxNode.fatherNode
-          if (func(value, currentNode.fatherNode.value)) {
-            currentNode.fatherNode.rightNode = currentNode
+      if (father == null) {                                                             //remoção da raiz
+          if(removedNode.leftNode != null && removedNode.rightNode != null){
+            val auxValue = maxValue(removedNode.leftNode)
+            remove(auxValue)
+            removedNode.value = auxValue
           }
-          else {
-            currentNode.fatherNode.leftNode = currentNode
+          else if(removedNode.leftNode != null && removedNode.rightNode == null){
+            val auxValue = maxValue(removedNode.leftNode)
+            remove(auxValue)
+            removedNode.value = auxValue
           }
-          _size -= 1
-        }
-        /* Demos passo para esquerda */
-        else {
-          /*Demos passo para a esquerda e temos direita -> 3º caso*/
-          if (currentNode.rightNode != null) {
-            /*Adaptação para o caso da andei pra esqueda e tem direita*/
-            currentNode.fatherNode.leftNode = currentNode.rightNode
-            currentNode.rightNode.fatherNode = currentNode.fatherNode
-            /*Algoritmo normal*/
-            currentNode.leftNode = auxNode.leftNode
-            currentNode.leftNode.fatherNode = currentNode
+          else if(removedNode.rightNode != null && removedNode.leftNode == null){
 
-            currentNode.rightNode = auxNode.rightNode
-            currentNode.rightNode.fatherNode = currentNode
-
-            currentNode.fatherNode = auxNode.fatherNode
-            if (func(value, currentNode.fatherNode.value)) {
-              currentNode.fatherNode.rightNode = currentNode
-            }
-            else {
-              currentNode.fatherNode.leftNode = currentNode
-            }
-            _size -= 1
+            val auxValue = minValue(removedNode.rightNode)
+            remove(auxValue)
+            removedNode.value = auxValue
           }
 
-          /*Demos passo para a esquerda e não temos direita -> 5º caso*/
-          else {
-            currentNode.leftNode = auxNode.leftNode
-            currentNode.leftNode.fatherNode = currentNode
-
-            currentNode.rightNode = auxNode.rightNode
-            currentNode.rightNode.fatherNode = currentNode
-
-            currentNode.fatherNode = auxNode.fatherNode
-            if (func(value, currentNode.fatherNode.value)) {
-              currentNode.fatherNode.rightNode = currentNode
-            }
-            else {
-              currentNode.fatherNode.leftNode = currentNode
-            }
-            _size -= 1
-          }
-        }
       }
-      /*Não temos direita -> 4º caso*/
+
       else {
-        currentNode.fatherNode.leftNode = currentNode.leftNode
-        currentNode.leftNode.fatherNode = currentNode.fatherNode
-        _size -= 1
+        if (removedNode.value < father.value) {
+          if (removedNode.leftNode == null && removedNode.rightNode == null) {
+            father.leftNode = null
+          }
+          else if (removedNode.rightNode != null && removedNode.leftNode != null){
+            val auxValue = minValue(removedNode.rightNode)
+            remove(auxValue)
+            father.leftNode.value = auxValue
+          }
+          else if (removedNode.leftNode != null && removedNode.rightNode == null){
+            val auxValue = maxValue(removedNode.leftNode)
+            remove(auxValue)
+            father.leftNode.value = auxValue
+          }
+          else if (removedNode.rightNode != null && removedNode.leftNode == null){
+            val auxValue = minValue(removedNode.rightNode)
+            remove(auxValue)
+            father.leftNode.value = auxValue
+          }
+        }
+        else if (removedNode.value > father.value) {
+
+          if (removedNode.leftNode == null && removedNode.rightNode == null) {
+            father.rightNode = null
+          }
+          else if(removedNode.rightNode != null && removedNode != null){
+            val auxValue = minValue(removedNode.rightNode)
+            remove(auxValue)
+            father.rightNode.value = auxValue
+          }
+          else if(removedNode.leftNode != null && removedNode.rightNode == null){
+            val auxValue = maxValue(removedNode.leftNode)
+            remove(auxValue)
+            father.rightNode.value = auxValue
+          }
+          else if(removedNode.rightNode != null && removedNode.leftNode == null){
+            val auxValue = minValue(removedNode.rightNode)
+            remove(auxValue)
+            father.rightNode.value = auxValue
+          }
+        }
       }
     }
   }
 
-  override def size: Int = _size
+  def exist(value: T): Boolean = {
+    val currentNode = searchValue(value, root)
+    currentNode match {
+      case null => false
+      case nodeTree => true
+    }
+  }
+
+  override def size(node : nodeTree[T] = root): Int ={
+    if(node == null) return 0
+    else{
+      size(node.leftNode)
+      size(node.rightNode)
+      var sizeTree = size(node.leftNode) + size(node.rightNode) + 1
+      return sizeTree
+    }
+  }
+
+  private def searchLeaf(value: T, node: nodeTree[T] = root): nodeTree[T] = {
+    if (node.value == value) {
+      return null
+    }
+    else if (value > node.value) {
+      if(node.rightNode != null) {
+        return searchLeaf(value, node.rightNode)
+      }
+      else return node
+    }
+    else {
+      if (node.leftNode != null) {
+        return searchLeaf(value, node.leftNode)
+      }
+      else return node
+    }
+  }
+
+  private def searchValue(value: T, node: nodeTree[T] = root): nodeTree[T] = {
+    if (node.value == value) {
+      return node
+    }
+    else if (value > node.value && node.rightNode != null) {
+      return searchValue(value, node.rightNode)
+    }
+    else if (node.leftNode != null) {
+      return searchValue(value, node.leftNode)
+    }
+    else {
+      return null
+    }
+  }
+
+  private def getFather(value:T, node : nodeTree[T] = root) : nodeTree[T] = {
+
+    if(value == node.value){
+      return null
+    }
+    else {
+      if(node.rightNode != null && node.rightNode.value == value ||node.leftNode != null && node.leftNode.value == value) {
+        return node
+      }
+      else{
+        if(value < node.value){
+          return getFather(value, node.leftNode)
+        }
+        else  {
+          return getFather(value, node.rightNode)
+        }
+      }
+    }
+  }
+
+  def showInOrder(node : nodeTree[T] = root): Unit = {
+
+    if(node == null) return
+    showInOrder(node.leftNode)
+    println(node.value)
+    showInOrder(node.rightNode)
+
+  }
+
+  def showPreOrder (node : nodeTree[T] = root) : Unit = {
+    if(node == null) return
+    println(node.value)
+    showPreOrder(node.leftNode)
+    showPreOrder(node.rightNode)
+  }
+
+  def minValue(node : nodeTree[T] = root ): T = {
+    node.leftNode match {
+      case null => node.value
+      case nodeTree => minValue(node.leftNode)
+    }
+  }
+
+  def maxValue(node : nodeTree[T] = root): T = {
+    node.rightNode match {
+      case null => node.value
+      case nodeTree => maxValue(node.rightNode)
+    }
+  }
 
 }
