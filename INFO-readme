@@ -1,0 +1,7 @@
+|-> Grupo:
+	(x) Estevam G. Albuquerque - 160005663
+	(x) Andrei E. M. Mazepas - 160112362
+	(x) Leonardo R. do Nascimento - 170038963
+
+|-> Limitações de implementações:
+	(x) binaryTree: Função remove com alguns erros. Caso em que se quer remover a raiz não funciona e retorna NullPointerException. Caso em que se quer remover quando demos 1 passo para direita e não temos esquerda nem no pai nem no filho.

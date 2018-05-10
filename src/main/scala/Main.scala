@@ -42,8 +42,10 @@ object Main {
     tree1.insert(100)
     tree1.insert(50)
     tree1.insert(150)
+    tree1.insert(175)
 
-    println(tree1.exist(80))
+
+    println(tree1.remove(150))
     println(tree1.size)
 
 
