@@ -1,8 +1,8 @@
 package ed_mutaveis
 
 class Queue[T] extends traitQueue[T] {
-  private val nodes: linkedList[T] = new linkedList[T]
-
+  private val nodes: linkedList[T] = new linkedList[T] /*Instancio uma nova lista para ser a fila*/
+  /*Crio todas as funções da fila em função das funções da lista*/
   override def isEmpty: Boolean = nodes.isEmpty
 
   override def insert(value: T): Unit = nodes.insert(value)

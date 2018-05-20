@@ -13,7 +13,7 @@ class GraphImpl[T]() extends Graph[T] {
         aresta.next = vertice.next
         vertice.next = aresta
     }
-    
+
     def findByValue(value: T) : Option[Vertice[T]] = {
         if(vertices.isEmpty == false){
             var verticeAtual = vertices.nodePointer(0)
@@ -86,7 +86,7 @@ class GraphImpl[T]() extends Graph[T] {
             verticesIt.moveNext
         }
         return visited
-    } 
+    }
 
     // tendo um problema com implementação do DFS usando array, elementos nem sempre serao int (tipo T)
     def DFSrecursao(vertice:T, visited: Map[T, Boolean], enablePrint : Boolean){
@@ -100,7 +100,7 @@ class GraphImpl[T]() extends Graph[T] {
         do{
             visited.get(arestaAtual.value) match {
                case Some(v) => {if(v==false) DFSrecursao(arestaAtual.value, visited, enablePrint)}
-               case  None => 
+               case  None =>
             }
             arestaAtual = arestaAtual.next
         }while(arestaAtual != null)
@@ -118,12 +118,12 @@ class GraphImpl[T]() extends Graph[T] {
 
         visited.set(vertice, true)
         filaNos.insert(vertice)
-        
+
         while(filaNos.isEmpty == false){
             var verticeAtual : T = vertice
             filaNos.first match {
                 case Some(v) => verticeAtual = v
-                case None => 
+                case None =>
             }
             filaNos.remove
 
@@ -142,7 +142,7 @@ class GraphImpl[T]() extends Graph[T] {
                 arestaAtual = arestaAtual.next
             }
         }
-        
+
     }
 
 

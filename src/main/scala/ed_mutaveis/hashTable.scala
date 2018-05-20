@@ -20,7 +20,7 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
 //  return 265443576
 //  }
 
-  override def insert(value: T): Unit = {
+  override def insert(value: T): Unit = { /*Com função hash mapeia o valor em algum índice*/
     _array(hashFunc(value)).insert(value)
 //    _array(hashFunc(value)).show
   }
@@ -31,6 +31,8 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
       None
     }
     else {
+      /*Podem ter havido colisões, então busco na lista (usando seu método find) do índice array[n] se o elemento existe. Assim vou varrendo o array*/
+      /*isDefined me retorna true caso encontre um Option(Some)*/
       if (_array(hashFunc(value)).find(value).isDefined) {
         Some(hashFunc(value))
       }
@@ -38,7 +40,7 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
     }
   }
 
-  override def remove(value: T): Boolean = {
+  override def remove(value: T): Boolean = { /*Percorro o hash e excluo o primeiro valor igual ao valor dado*/
     if (_array(hashFunc(value)).size != 0) {
       _array(hashFunc(value)).remove(value)
       return true
@@ -49,11 +51,11 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
     }
   }
 
-  override def removeAt(key: Int): Boolean = {
+  override def removeAt(key: Int): Boolean = { /*Excluo o elemento dado a chave*/
     _array(key).removeAt(_array(key).size - 1)
   }
 
-  override def show: Unit = {
+  override def show: Unit = { /*Mostro os elementos do hash*/
     var i: Int = 0
     while (i < size) {
       if (_array(i).size != 0) {
@@ -64,8 +66,5 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
       i += 1
     }
   }
-
-//  override def size: Int = ???
-
 
 }

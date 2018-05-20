@@ -1,7 +1,8 @@
 package ed_mutaveis
 
 class Stack[T] extends traitStack[T] {
-  private val nodes: linkedList[T] = new linkedList[T]
+  private val nodes: linkedList[T] = new linkedList[T] /*Instancio uma nova lista para ser a pilha*/
+  /*Crio todas as funções da fila em função das funções da lista*/
 
   override def isEmpty: Boolean = nodes.isEmpty
 

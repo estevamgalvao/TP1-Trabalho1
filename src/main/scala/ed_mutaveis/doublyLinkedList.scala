@@ -8,16 +8,18 @@ class doublyLinkedList[T] extends traitList[T] {
   private var head: doublyNodeList[T] = _
   private var end: doublyNodeList[T] = _
 
+  /*head e end não são ponteiros!*/
+
   def nodePointer(pos: Int): doublyNodeList[T] = {
-    if ((_size - pos) >= pos) {
+    if ((_size - pos) >= pos) { /*Verifico se vou percorrer do inicio pro fim ou do fim pro inicio de acordo com a menor distância*/
       var currentNode: doublyNodeList[T] = head
-      for (i <- 0 until pos) {
+      for (i <- 0 until pos) { /*Se for menor percorrer do inicio*/
 //        println("Variável i: " + i + "\nCurrent Node: " + currentNode.value)
         currentNode = currentNode.nextNode
       }
       return currentNode
     }
-    else {
+    else { /*Se for menor percorrer a partir do fim*/
       var currentNode: doublyNodeList[T] = end
       for (i <- pos until _size - 1) {
         currentNode = currentNode.prevNode
@@ -27,26 +29,26 @@ class doublyLinkedList[T] extends traitList[T] {
     }
   }
 
-  override def insertAt(pos: Int, value: T): Boolean = {
-    if (pos >= 0 && pos <= _size) {
+  override def insertAt(pos: Int, value: T): Boolean = { /*Função para inserir em uma posição específica*/
+    if (pos >= 0 && pos <= _size) { /*Verifico se a posição é válida*/
       if (head == null) {
-        head = doublyNodeList(value, null, null )
+        head = doublyNodeList(value, null, null ) /*Caso em que a lista está vazia*/
       }
-      else if (head.nextNode == null && pos != 0) {
+      else if (head.nextNode == null && pos != 0) { /*Caso em que só há a cabeça, então o próximo elemento tem que ser o end*/
         end = doublyNodeList(value, head, null)
         head.nextNode = end
       }
-      else if (head.nextNode == null && pos == 0){
-        val valueAux = head.value
-        head = doublyNodeList(value, null, null)
-        end = doublyNodeList(valueAux, head, null)
-        head.nextNode = end
+      else if (head.nextNode == null && pos == 0){ /*Caso em que só há a cabeça e querem atualizar a cabeça*/
+        val valueAux = head.value /*Guardo o valor da minha antiga cabeça*/
+        head = doublyNodeList(value, null, null) /*Reinicializo minha cabeça com o valor dado*/
+        end = doublyNodeList(valueAux, head, null) /*Atualizo o end para ser minha antiga cabeça*/
+        head.nextNode = end /*Ligo a nova cabeça e o end*/
       }
-      else if (pos == 0) {
+      else if (pos == 0) { /*Atualizo a cabeça*/
         head = doublyNodeList(value, null, head)
         head.nextNode.prevNode = head
       }
-      else if (pos == _size) {
+      else if (pos == _size) { /*Atualizo o end*/
         end = doublyNodeList(value, end, null)
         end.prevNode.nextNode = end
       }
@@ -67,7 +69,7 @@ class doublyLinkedList[T] extends traitList[T] {
     }
   }
 
-  override def insert(value: T): Unit = {
+  override def insert(value: T): Unit = { /*Sempre insere no final da lista, se está vazia também a inicializa*/
     insertAt(_size, value)
   }
 

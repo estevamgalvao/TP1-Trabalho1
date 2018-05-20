@@ -37,31 +37,22 @@ object Main {
     val dblist = new doublyLinkedList[Int]
     val list1 = new linkedList[Int]
     val dic1 = new hashTable[Int](100, multPrime)
-    val tree1 = new binaryTree[Int](compare)
 
-    tree1.insert(100)
-    tree1.insert(50)
-    tree1.insert(150)
-    tree1.insert(175)
-
-
-    println(tree1.remove(150))
-    println(tree1.size)
 
 
     //    println()
     //    tree1.show
 
-    //    dic1.insert(1)
-//    dic1.insert(23123)
-//    dic1.insert(343)
-//    dic1.show
-//
-//    println("\nCheck: " + dic1.check(23123).getOrElse())
-//
-//    dic1.remove(3143)
-//    dic1.removeAt(76)
-//    dic1.show
+    dic1.insert(1)
+    dic1.insert(23123)
+    dic1.insert(343)
+    dic1.show
+
+    println("\nCheck: " + dic1.check(23123).getOrElse())
+
+    dic1.remove(3143)
+    dic1.removeAt(76)
+    dic1.show
 
 
   }
