@@ -1,4 +1,4 @@
-package br.unb.cic.ed.mutable
+package ed_mutaveis
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers
@@ -8,7 +8,7 @@ import org.scalatest.BeforeAndAfter
 class TestMap extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAfter {
 
   behavior of "A Map"
-  var map : br.unb.cic.ed.mutable.Map[Int, Char] = new br.unb.cic.ed.mutable.MapImpl[Int, Char]()
+  var map : Map[Int, Char] = new MapImpl[Int, Char]()
 
 
   it should "have size == 0 before setting anything" in {

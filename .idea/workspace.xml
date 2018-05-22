@@ -2,24 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e13003a8-5167-46ec-8128-63b22c9a2078" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_12_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/tp1-trabalho1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/tp1-trabalho1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Graph.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Graph.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/GraphImpl.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/GraphImpl.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Map.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Map.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/MapImpl.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/MapImpl.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/doublyLinkedList.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/hashTable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/hashTable.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/TestMap.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/doublyLinkedListSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/doublyListIteratorSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/hashTableSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/linkedListSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/queueSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/stackSpec.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e69c58c2a571a265d306$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e69c58c2a571a265d306.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e69c58c2a571a265d306.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/TestMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/TestMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/TestStack.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/TestStack.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/binaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/binaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/doublyNodeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/doublyNodeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/hashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/hashTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/linkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/linkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/nodeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/nodeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/nodeTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/ed_mutaveis/nodeTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1$sources/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1$sources/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1_2.12/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1_2.12/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1_2.12/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/exerc-cios-tp1/exerc-cios-tp1_2.12/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1$sources-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/exerc-cios-tp1-exerc-cios-tp1_2.12-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,11 +81,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="328">
-                  <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+                <state relative-caret-position="112">
+                  <caret line="47" column="20" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -56,8 +96,8 @@
           <file leaf-file-name="hashTable.scala" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/hashTable.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
+                <state relative-caret-position="342">
+                  <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -66,7 +106,43 @@
             <entry file="file://$PROJECT_DIR$/build.sbt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
-                  <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+                  <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestStack.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/scala/TestStack.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="binaryTreeSpec.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="95">
+                  <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="linkedListSpec.scala" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/scala/linkedListSpec.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestMap.scala" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/scala/TestMap.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -75,7 +151,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/scala/immutable/List/List.scala">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="468">
-                  <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+                  <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -84,7 +160,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/scala/immutable/Stack/Stack.scala">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="540">
-                  <caret line="30" column="5" lean-forward="true" selection-start-column="2" selection-end-line="36" selection-end-column="3" />
+                  <caret line="30" column="5" selection-start-column="2" selection-end-line="36" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -96,7 +172,7 @@
           <file leaf-file-name="linkedList.scala" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="206">
+                <state relative-caret-position="488">
                   <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
                 </state>
               </provider>
@@ -135,7 +211,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/List.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitStack.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/testLinkedList.scala" />
@@ -167,15 +242,16 @@
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/Deque.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/DequeImpl.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/immutable/List/List.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/doublyLinkedListSpec.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/TestStack.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/TestMap.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/TestDeque.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/TestList.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/immutable/Stack/Stack.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ed_mutaveis/hashTable.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/test/scala/TestMap.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/TestStack.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala" />
       </list>
     </option>
   </component>
@@ -276,6 +352,13 @@
             <path>
               <item name="Exercícios-TP1" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP1 - Trabalho1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Exercícios-TP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP1 - Trabalho1" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -307,7 +390,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="ScalaTest.ScalaTests in 'scala'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="tp1-trabalho1" />
@@ -348,6 +431,30 @@
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <setting name="consoleArgs" value="-usejavacp" />
     </configuration>
+    <configuration name="ScalaTests in 'scala'" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true">
+      <module name="tp1-trabalho1" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="All in package" />
+      <setting name="package" value="" />
+      <buffered bufClass="ed_mutaveis.TestDeque" />
+      <buffered bufClass="ed_mutaveis.TestMap" />
+      <buffered bufClass="ed_mutaveis.binaryTreeSpec" />
+      <buffered bufClass="ed_mutaveis.doublyLinkedListSpec" />
+      <buffered bufClass="ed_mutaveis.doublyListIteratorSpec" />
+      <buffered bufClass="ed_mutaveis.hashTableSpec" />
+      <buffered bufClass="ed_mutaveis.linkedListSpec" />
+      <buffered bufClass="ed_mutaveis.queueSpec" />
+      <buffered bufClass="ed_mutaveis.stackSpec" />
+      <buffered bufClass="immutable.TestImmutableList" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -373,9 +480,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Scala Console.Scala Console" />
+      <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.ScalaTests in 'scala'" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Scala Console.Scala Console" />
       </list>
@@ -408,8 +517,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="3046828569000" />
-        <entry key="$PROJECT_DIR$/build.sbt" value="1416262882" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="3812784993" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="2466230007" />
       </map>
     </option>
@@ -450,46 +558,45 @@
       <workItem from="1525705229199" duration="2099000" />
       <workItem from="1525874806519" duration="2271000" />
       <workItem from="1526748135160" duration="4498000" />
-      <workItem from="1526994218734" duration="2899000" />
+      <workItem from="1526994218734" duration="5373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246900000" />
+    <option name="totallyTimeSpent" value="249374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32910052" />
       <window_info anchor="right" id="sbt" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4074074" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13761468" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32946146" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32910052" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10899471" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13761468" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32946146" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
@@ -539,13 +646,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/Queue.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/traitList.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -794,41 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" lean-forward="true" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/doublyLinkedListSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/TestStack.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="10" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/TestMap.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="3" selection-end-line="56" selection-end-column="1" />
-          <folding>
-            <element signature="e#31#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,7 +917,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/linkedList.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="488">
           <caret line="176" column="23" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
         </state>
       </provider>
@@ -856,31 +925,66 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/immutable/Stack/Stack.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="30" column="5" lean-forward="true" selection-start-column="2" selection-end-line="36" selection-end-column="3" />
+          <caret line="30" column="5" selection-start-column="2" selection-end-line="36" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/immutable/List/List.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ed_mutaveis/hashTable.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
+        <state relative-caret-position="342">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="72" lean-forward="true" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/TestMap.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/TestStack.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        <state relative-caret-position="112">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="20" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/binaryTreeSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/linkedListSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
     </entry>
