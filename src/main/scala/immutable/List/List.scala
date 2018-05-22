@@ -1,4 +1,4 @@
- package immutable
+ package immutable.List
 
  /*
   * Todas as implementacoes do trait List precisam ser

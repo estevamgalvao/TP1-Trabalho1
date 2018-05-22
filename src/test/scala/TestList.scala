@@ -1,4 +1,4 @@
- package immutable
+ package immutable.List
 
  import org.scalatest._
 // import org.scalatest.FlatSpec
