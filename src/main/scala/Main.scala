@@ -46,11 +46,15 @@ object Main {
     dic1.insert(1)
     dic1.insert(23123)
     dic1.insert(343)
+    dic1.insert(2)
+    dic1.insert(2)
+    dic1.insert(2)
     dic1.show
 
     println("\nCheck: " + dic1.check(23123).getOrElse())
 
     dic1.remove(3143)
+    dic1.remove(2)
     dic1.removeAt(76)
     dic1.show
 

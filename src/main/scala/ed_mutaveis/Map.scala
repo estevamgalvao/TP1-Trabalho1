@@ -1,4 +1,4 @@
-package br.unb.cic.ed.mutable
+package ed_mutaveis
 
 trait Map[A,B] {
   def get(key: A) : Option[B]

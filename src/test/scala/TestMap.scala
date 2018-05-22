@@ -34,7 +34,7 @@ class TestMap extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAf
       map.get(2) should be (Some('Z'))
       map.size() should be (2)
   }
-  
+
 
 
   it should "return the new value Some('B') after calling get(1)" in {
@@ -50,8 +50,8 @@ class TestMap extends FlatSpec with Matchers with GivenWhenThen with BeforeAndAf
     map.size() should be (0)
   }
 
- 
-  
+
+
 
 
 }

@@ -1,4 +1,4 @@
-package br.unb.cic.ed.mutable
+package ed_mutaveis
 
 trait Graph[T] {
   def createLink(origin: T, destiny: T, weight: T, directed: Boolean): Unit

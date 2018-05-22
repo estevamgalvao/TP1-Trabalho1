@@ -1,11 +1,11 @@
-package br.unb.cic.ed.mutable
+package ed_mutaveis
 
 case class Vertice[T](val value: T, var next: Aresta[T] = null) //o next de um vertice aponta pra "primeira" aresta
 case class Aresta[T](val value: T, val peso: T, var next: Aresta[T] = null) //o next de uma aresta aponta pro proximo na lista de adjacencia
 
 
 class GraphImpl[T]() extends Graph[T] {
-    private var vertices = new br.unb.cic.ed.mutable.doublyLinkedList[Vertice[T]]()
+    private var vertices = new doublyLinkedList[Vertice[T]]()
 
     private var _size = 0
 
@@ -46,7 +46,7 @@ class GraphImpl[T]() extends Graph[T] {
 
     def printGraph(): Unit = {
         println("vertices: ")
-        var verticesIt = new br.unb.cic.ed.mutable.doublylistIterator[Vertice[T]](vertices)
+        var verticesIt = new doublylistIterator[Vertice[T]](vertices)
         verticesIt.moveBegin
         for(i <- 0 until vertices.size ){
             print(verticesIt.current.value)
@@ -74,7 +74,7 @@ class GraphImpl[T]() extends Graph[T] {
     //retorna um map com todos os valores do grafo associados com false
     def InicializarMap() : Map[T, Boolean] = {
         var visited = new MapImpl[T, Boolean]
-        var verticesIt = new br.unb.cic.ed.mutable.doublylistIterator[Vertice[T]](vertices)
+        var verticesIt = new doublylistIterator[Vertice[T]](vertices)
         verticesIt.moveBegin
         for(i <- 0 until vertices.size ){
             visited.set(verticesIt.current.value, false)

@@ -225,4 +225,9 @@ class doublyLinkedList[T] extends traitList[T] {
     }
     return sizeAUX != _size
   }
+
+  def modify(pos: Int, NewValue: T) : Unit = {
+    var currentNode = nodePointer(pos)
+    currentNode.value = NewValue
+  }
 }

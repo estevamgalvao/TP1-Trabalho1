@@ -60,7 +60,7 @@ class hashTable[T](size: Int, hashFunc: T => Int) extends traitHashTable[T] {
     while (i < size) {
       if (_array(i).size != 0) {
         for (j <- 0 until _array(i).size) {
-          println("[Key: " + i + " | Value: " + _array(i).elementAt(j) + "]")
+          println("[Key: " + i + "/" + j + " | Value: " + _array(i).elementAt(j) + "]")
         }
       }
       i += 1

@@ -1,9 +1,9 @@
-package br.unb.cic.ed.mutable
+package ed_mutaveis
 
 class MapImpl[A, B]() extends Map[A, B] {
 
-    private var keys = new br.unb.cic.ed.mutable.doublyLinkedList[A]()
-    private var values = new br.unb.cic.ed.mutable.doublyLinkedList[B]()
+    private var keys = new doublyLinkedList[A]()
+    private var values = new doublyLinkedList[B]()
     private var _size : Int = 0
 
     def get(key : A) : Option[B] = {

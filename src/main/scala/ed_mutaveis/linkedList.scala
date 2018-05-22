@@ -178,4 +178,9 @@ class linkedList[T] extends traitList[T] {
       currentNode = currentNode.nextNode
     }
   }
+
+  override def modify(pos: Int, NewValue: T) : Unit = {
+    var currentNode = nodePointer(pos)
+    currentNode.value = NewValue
+  }
 }

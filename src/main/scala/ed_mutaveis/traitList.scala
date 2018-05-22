@@ -14,4 +14,5 @@ trait traitList[T] {
   def filter(func: (T) => Boolean): Boolean
   def show: Unit
   def applyAll(func: (T) => T): Unit
+  def modify(pos: Int, value: T): Unit
 }
